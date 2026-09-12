@@ -79,3 +79,48 @@
 | Trabajo Final (TB4) | Pendiente | `[Por completar]` |
 
 ---
+
+# Tabla de contenidos
+
+- [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
+- [Project Report Collaboration Insights](#project-report-collaboration-insights)
+- [Tabla de contenidos](#tabla-de-contenidos)
+- [Student Outcome](#student-outcome)
+- [Perfiles de los Integrantes del Equipo](#perfiles-de-los-integrantes-del-equipo)
+- [Capítulo I: Product \& Agile Foundation](#capítulo-i-product--agile-foundation)
+  - [1.1. Descripción del producto](#11-descripción-del-producto)
+    - [1.1.1. Nombre del producto](#111-nombre-del-producto)
+    - [1.1.2. Problema y necesidad](#112-problema-y-necesidad)
+    - [1.1.3. Usuarios objetivo](#113-usuarios-objetivo)
+    - [1.1.4. Propuesta de solución](#114-propuesta-de-solución)
+    - [1.1.5. Objetivos del producto](#115-objetivos-del-producto)
+    - [1.1.6. Alcance inicial](#116-alcance-inicial)
+    - [1.1.7. Restricciones](#117-restricciones)
+  - [1.2. Product Vision](#12-product-vision)
+  - [1.3. Requirements Specification](#13-requirements-specification)
+    - [1.3.1. As-Is Scenario Mapping](#131-as-is-scenario-mapping)
+    - [1.3.2. To-Be Scenario Mapping](#132-to-be-scenario-mapping)
+    - [1.3.3. Epics](#133-epics)
+    - [1.3.4. User Stories](#134-user-stories)
+    - [1.3.5. Product Backlog inicial](#135-product-backlog-inicial)
+  - [1.4. Estrategia Agile](#14-estrategia-agile)
+    - [1.4.1. Marco de trabajo seleccionado](#141-marco-de-trabajo-seleccionado)
+    - [1.4.2. Cadencia y ceremonias](#142-cadencia-y-ceremonias)
+    - [1.4.3. Definition of Ready y Definition of Done](#143-definition-of-ready-y-definition-of-done)
+    - [1.4.4. Estimación y priorización](#144-estimación-y-priorización)
+    - [1.4.5. Métricas de proceso](#145-métricas-de-proceso)
+  - [1.5. Organización del equipo](#15-organización-del-equipo)
+    - [1.5.1. Roles y responsabilidades](#151-roles-y-responsabilidades)
+    - [1.5.2. Matriz RACI](#152-matriz-raci)
+    - [1.5.3. Canales de comunicación](#153-canales-de-comunicación)
+  - [1.6. Estrategia inicial de Software Factory](#16-estrategia-inicial-de-software-factory)
+    - [1.6.1. Flujo Plan → Code → Build → Test → Release → Deploy → Operate](#161-flujo-plan--code--build--test--release--deploy--operate)
+    - [1.6.2. Herramientas seleccionadas](#162-herramientas-seleccionadas)
+    - [1.6.3. Source Code Management y estrategia de ramas](#163-source-code-management-y-estrategia-de-ramas)
+    - [1.6.4. Arquitectura objetivo y candidatos a microservicios](#164-arquitectura-objetivo-y-candidatos-a-microservicios)
+    - [1.6.5. Prácticas de seguridad iniciales (DevSecOps)](#165-prácticas-de-seguridad-iniciales-devsecops)
+- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
+
+---
