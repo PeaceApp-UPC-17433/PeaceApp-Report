@@ -33,16 +33,16 @@
 
 **Integrantes:**
 
-| Código | Apellidos y Nombres |
-| :---: | :--- |
-| `[Código 1]` | `[Apellidos, Nombres 1]` |
-| `[Código 2]` | `[Apellidos, Nombres 2]` |
-| `[Código 3]` | `[Apellidos, Nombres 3]` |
-| `[Código 4]` | `[Apellidos, Nombres 4]` |
-| `[Código 5]` | `[Apellidos, Nombres 5]` |
-| `[Código 6]` | `[Apellidos, Nombres 6]` |
-| `[Código 7]` | `[Apellidos, Nombres 7]` |
-| `[Código 8]` | `[Apellidos, Nombres 8]` |
+|        Código         | Apellidos y Nombres                      |
+|:---------------------:|:-----------------------------------------|
+|     `[Código 1]`      | `[Apellidos, Nombres 1]`                 |
+|     `U201714765`      | `Barrutia Vaez, Ricardo Andree`          |
+|     `U202214784`      | `Espinoza Inoñan, Fabiola Ximena`        |
+|     `[Código 4]`      | `[Apellidos, Nombres 4]`                 |
+|     `[Código 5]`      | `[Apellidos, Nombres 5]`                 |
+|     `[Código 6]`      | `[Apellidos, Nombres 6]`                 |
+|     `[Código 7]`      | `[Apellidos, Nombres 7]`                 |
+|     `[Código 8]`      | `[Apellidos, Nombres 8]`                 |
 
 <br>
 
@@ -74,9 +74,7 @@
 | Entrega | Estado | Evidencia |
 | :--- | :---: | :--- |
 | Primer Avance - Semana 03 | Completado | Commits e historial de la rama `develop` integrados a `main` vía Pull Request. |
-| Segundo Avance | Pendiente | `[Por completar]` |
-| Trabajo Parcial (TB2) | Pendiente | `[Por completar]` |
-| Trabajo Final (TB4) | Pendiente | `[Por completar]` |
+
 
 ---
 
@@ -131,16 +129,16 @@ El curso **1ASI0548 - Agile Software Factories** contribuye al desarrollo del si
 
 > **ABET - EAC - Student Outcome 5:** *La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusión, establecen metas, planifican tareas y cumplen objetivos.*
 
-| Criterio específico | Acciones realizadas | Conclusiones |
-| :--- | :--- | :--- |
-| **5.1.** Reconoce la contribución individual dentro de un equipo. | `[Apellidos, Nombres 1]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 1.]` |
-| | `[Apellidos, Nombres 2]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 2.]` |
-| | `[Apellidos, Nombres 3]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 3.]` |
-| | `[Apellidos, Nombres 4]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 4.]` |
-| | `[Apellidos, Nombres 5]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 5.]` |
-| | `[Apellidos, Nombres 6]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 6.]` |
-| | `[Apellidos, Nombres 7]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 7.]` |
-| | `[Apellidos, Nombres 8]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 8.]` |
+| Criterio específico | Acciones realizadas                                                                                                                                                                                                 | Conclusiones                                                                                                                                                                              |
+| :--- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **5.1.** Reconoce la contribución individual dentro de un equipo. | `[Apellidos, Nombres 1]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 1.]`                                                                                                                                               |
+| | `Barrutia Vaez, Ricardo Andree`<br>`Texto`                                                                                                                                                                          | `Texto 2`                                                                                                                                                                                 |
+| | `[Apellidos, Nombres 3]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 3.]`                                                                                                                                               |
+| | `[Apellidos, Nombres 4]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 4.]`                                                                                                                                               |
+| | `[Apellidos, Nombres 5]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 5.]`                                                                                                                                               |
+| | `[Apellidos, Nombres 6]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 6.]`                                                                                                                                               |
+| | `[Apellidos, Nombres 7]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 7.]`                                                                                                                                               |
+| | `[Apellidos, Nombres 8]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 8.]`                                                                                                                                               |
 | **5.2.** Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos. | El equipo definió la estrategia Agile (Scrum con sprints de dos semanas), distribuyó roles formales, construyó el Product Backlog inicial y acordó la estrategia de Software Factory documentada en la sección 1.6. | La organización formal del equipo y la trazabilidad *Product Backlog → User Stories → Sprint Backlog* permitieron cerrar el Primer Avance con entregables verificables en el repositorio. |
 
 ---
@@ -166,9 +164,9 @@ El equipo está conformado por ocho estudiantes de la carrera de Ingeniería de 
 </tr>
 <tr>
 <td width="70%">
-<b>Nombre:</b> [Apellidos, Nombres 2] (<code>[Código 2]</code>)<br><br>
-<b>Rol en el equipo:</b> [Rol]<br><br>
-<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+<b>Nombre:</b> Barrutia Vaez, Ricardo Andree (<code>u201714765</code>)<br><br>
+<b>Rol en el equipo:</b> Frontend Developer<br><br>
+<b>Conocimientos técnicos / habilidades:</b> Mi nombre es Ricardo Andree Barrutia Vaez, como estudiante de ingeniería de software he adquirido conocimientos de C++, Java y de Ionic. Con respecto a las habilidades más destacables de mi persona, considero que el trabajo en equipo es una de ellas. Además de la capacidad resolutiva a la par que adaptativa ante diversas situaciones.
 </td>
 <td width="30%" align="center">
 <img src="assets/integrante2.png" alt="[Apellidos, Nombres 2]" width="150">
@@ -176,9 +174,9 @@ El equipo está conformado por ocho estudiantes de la carrera de Ingeniería de 
 </tr>
 <tr>
 <td width="70%">
-<b>Nombre:</b> [Apellidos, Nombres 3] (<code>[Código 3]</code>)<br><br>
-<b>Rol en el equipo:</b> [Rol]<br><br>
-<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+<b>Nombre:</b> Espinoza Inoñan, Fabiola Ximena (<code>u202214784</code>)<br><br>
+<b>Rol en el equipo:</b> Backend Developer<br><br>
+<b>Conocimientos técnicos / habilidades:</b>  	Mi nombre es Fabiola Espinoza, tengo 21 años y estudio Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me considero una persona responsable, creativa y empática, con habilidades destacadas en el trabajo en equipo y la convivencia con otras personas. He participado en el programa Coder Bloom, 28h y más. Y actualmente soy coordinadora de ACM Women UPC.
 </td>
 <td width="30%" align="center">
 <img src="assets/integrante3.png" alt="[Apellidos, Nombres 3]" width="150">
