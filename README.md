@@ -367,3 +367,35 @@ PeaceApp es una plataforma móvil y web que construye un mapa colaborativo de ro
 | **Regulatoria** | Tratamiento de datos personales y de geolocalización sujeto a la Ley N.° 29733 de Protección de Datos Personales y su reglamento. | Consentimiento explícito, minimización de datos, anonimización del reporte y política de retención documentada. |
 | **De contenido** | Los reportes son generados por usuarios y pueden contener contenido sensible o difamatorio. | Moderación, términos de uso, reputación y mecanismo de apelación desde el primer incremento. |
 | **De datos** | La calidad del mapa depende de la densidad de reportes en cada zona. | Se define un umbral mínimo de reportes por celda antes de publicar índices de riesgo. |
+
+## 1.2. Product Vision
+
+**Declaración de visión (Moore's Product Vision Statement).**
+
+> **Para** ciudadanos, juntas vecinales, trabajadores de última milla y autoridades locales del Perú
+> **que** necesitan información oportuna, georreferenciada y confiable sobre robos, accidentes y siniestros en la vía pública,
+> **PeaceApp es** una plataforma colaborativa de mapeo y prevención de incidentes de seguridad ciudadana
+> **que** convierte el reporte ciudadano validado por la comunidad en mapas de calor, rutas de menor riesgo y analítica accionable.
+> **A diferencia de** la estadística oficial —publicada con meses de retraso y sin georreferenciación— y de los grupos de mensajería vecinales —sin verificación, sin estructura ni memoria histórica—,
+> **nuestro producto** garantiza la confiabilidad mediante validación comunitaria, reputación de usuarios y detección automatizada de reportes falsos o duplicados, y entrega a las autoridades evidencia consolidada para priorizar la intervención preventiva.
+
+**Valor entregado por segmento.**
+
+| Segmento | Valor entregado |
+| :--- | :--- |
+| Ciudadano en tránsito | Decidir ruta y horario con evidencia en lugar de percepción, reduciendo su exposición al riesgo. |
+| Juntas vecinales y serenazgos | Priorizar patrullaje sobre puntos críticos reales y medir el efecto de la intervención. |
+| Conductores y repartidores | Anticipar tramos y franjas horarias de alta incidencia en su jornada. |
+| Comisarías y gobiernos locales | Complementar la estadística oficial con señales ciudadanas en tiempo real y sustentar decisiones presupuestales. |
+
+**Product Vision Board.**
+
+| Bloque | Contenido |
+| :--- | :--- |
+| **Visión** | Que ninguna persona tenga que elegir su ruta a ciegas. |
+| **Grupo objetivo** | Ciudadanos en tránsito, trabajadores de última milla, juntas vecinales, serenazgos y gobiernos locales en zonas urbanas del Perú. |
+| **Necesidades** | Información de incidentes oportuna, georreferenciada y verificable; capacidad de reportar en segundos; evidencia consolidada para priorizar intervención. |
+| **Producto** | Aplicación móvil de reporte y consulta, aplicación web de consulta, panel analítico institucional y backend de microservicios con validación comunitaria e inteligencia sobre reportes. |
+| **Objetivos de negocio** | Alcanzar una densidad de reportes suficiente para publicar índices de riesgo confiables en las zonas piloto y validar el panel analítico con al menos una organización vecinal o municipal. |
+
+---
