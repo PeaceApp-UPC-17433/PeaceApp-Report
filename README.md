@@ -660,3 +660,60 @@ El equipo adopta **Scrum** como marco de trabajo principal, complementado con pr
 | Tiempo de revisión de Pull Request | Tiempo entre la apertura del PR y su aprobación. | Menor o igual a 24 horas. |
 | Tasa de fallos del pipeline | Porcentaje de ejecuciones fallidas sobre el total. | Menor o igual al 15 %. |
 | Distribución de la carga | Diferencia entre los story points completados por cada integrante. | Variación menor al 20 %. |
+
+## 1.5. Organización del equipo
+
+El equipo está conformado por ocho integrantes. Se adopta una organización de **equipo único multifuncional** con roles Scrum formales y especialización técnica por componente, evitando la división en subequipos aislados para preservar la propiedad colectiva del código.
+
+### 1.5.1. Roles y responsabilidades
+
+| Rol | Integrante | Responsabilidades principales |
+| :--- | :--- | :--- |
+| **Team Leader / Scrum Master** | `[Apellidos, Nombres 1]` | Facilitar las ceremonias, remover impedimentos, velar por el cumplimiento de la DoR y la DoD, y coordinar las entregas y el Reporte de Participación. |
+| **Product Owner** | `[Apellidos, Nombres 2]` | Custodiar la Product Vision, mantener y priorizar el Product Backlog, aceptar o rechazar los incrementos según criterios de aceptación. |
+| **Arquitecto de Software** | `[Apellidos, Nombres 3]` | Definir la descomposición en microservicios, los contratos entre servicios, los atributos de calidad y las decisiones técnicas registradas como ADR. |
+| **DevOps Engineer** | `[Apellidos, Nombres 4]` | Construir y mantener la Software Factory: pipelines de CI/CD, contenedorización, registro de artefactos, despliegue y observabilidad. |
+| **Backend Developer** | `[Apellidos, Nombres 5]` | Implementar los microservicios de dominio, sus APIs y su persistencia, con sus pruebas unitarias y de integración. |
+| **Backend Developer / Data** | `[Apellidos, Nombres 6]` | Implementar el procesamiento del histórico, la agregación para mapas de calor y el componente de detección de reportes falsos y duplicados. |
+| **Mobile Developer** | `[Apellidos, Nombres 7]` | Implementar la aplicación móvil: reporte, mapa, validación y notificaciones. |
+| **Frontend Web Developer / QA** | `[Apellidos, Nombres 8]` | Implementar el panel analítico web y liderar la estrategia de pruebas funcionales y de aceptación. |
+
+> **Nota:** los roles Scrum (Scrum Master y Product Owner) no eximen a quien los ejerce de participar en la construcción del producto. Todos los integrantes contribuyen con código o artefactos verificables en cada sprint.
+
+### 1.5.2. Matriz RACI
+
+**R** = Responsable de ejecutar · **A** = *Accountable* (rinde cuentas) · **C** = Consultado · **I** = Informado
+
+| Actividad | Team Leader / SM | Product Owner | Arquitecto | DevOps | Backend | Backend/Data | Mobile | Frontend/QA |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Gestión y priorización del Product Backlog | C | **A/R** | C | I | C | C | C | C |
+| Definición de la arquitectura y ADR | I | C | **A/R** | R | C | C | C | C |
+| Configuración de la Software Factory (CI/CD) | I | I | C | **A/R** | C | C | I | C |
+| Desarrollo de microservicios de dominio | I | C | C | C | **A/R** | R | I | I |
+| Modelo de detección de falsos y duplicados | I | C | C | I | C | **A/R** | I | C |
+| Desarrollo de la aplicación móvil | I | C | C | I | C | I | **A/R** | C |
+| Desarrollo del panel analítico web | I | C | C | I | C | C | I | **A/R** |
+| Estrategia y ejecución de pruebas | C | C | C | C | R | R | R | **A/R** |
+| Facilitación de ceremonias y retrospectivas | **A/R** | C | I | I | I | I | I | I |
+| Consolidación y entrega del informe | **A/R** | R | C | C | C | C | C | C |
+
+### 1.5.3. Canales de comunicación
+
+| Canal | Uso | Cadencia |
+| :--- | :--- | :--- |
+| GitHub (Issues, Pull Requests y Projects) | Fuente única de verdad del trabajo: work-items, revisión de código y estado del tablero. | Continuo |
+| WhatsApp (grupo del equipo) | Coordinación operativa y avisos urgentes. | Continuo |
+| Discord | Daily Scrum asíncrono, *pair programming* remoto y sesiones de trabajo. | Diario |
+| Google Drive | Repositorio de entregables formales (informe en Word y PDF, presentación, reporte de participación). | Por hito |
+| Sesión síncrona del curso | Sprint Review y coordinación con el docente. | Semanal |
+
+**Acuerdos de trabajo del equipo.**
+
+1. Todo trabajo comienza como un work-item en el tablero; no se escribe código sin un ítem asociado.
+2. Ningún integrante mantiene más de dos ítems simultáneos en *In Progress*.
+3. Los Pull Requests se revisan dentro de las 24 horas siguientes a su apertura.
+4. Un impedimento que bloquea por más de 24 horas se escala al Scrum Master.
+5. Un commit por cada sección o entregable completado, con mensaje según *Conventional Commits*.
+6. Nadie integra su propio Pull Request sin la aprobación de otro integrante.
+
+---
