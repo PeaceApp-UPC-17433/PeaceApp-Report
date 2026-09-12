@@ -35,7 +35,7 @@
 
 |        Código         | Apellidos y Nombres                      |
 |:---------------------:|:-----------------------------------------|
-|     `[Código 1]`      | `[Apellidos, Nombres 1]`                 |
+|     `U202218664`      | `Anampa Lavado, Luis Angel`              |
 |     `U201714765`      | `Barrutia Vaez, Ricardo Andree`          |
 |     `U202214784`      | `Espinoza Inoñan, Fabiola Ximena`        |
 |     `[Código 4]`      | `[Apellidos, Nombres 4]`                 |
@@ -128,7 +128,7 @@ El curso **1ASI0548 - Agile Software Factories** contribuye al desarrollo del si
 
 | Criterio específico | Acciones realizadas                                                                                                                                                                                                 | Conclusiones                                                                                                                                                                              |
 | :--- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **5.1.** Reconoce la contribución individual dentro de un equipo. | `[Apellidos, Nombres 1]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 1.]`                                                                                                                                               |
+| **5.1.** Reconoce la contribución individual dentro de un equipo. | Anampa Lavado, Luis Angel<br>Me encargué de redactar y estructurar parte de la documentación del Primer Avance junto con mis compañeros, dividiéndonos las secciones del informe para avanzar en paralelo. Completé mi parte dentro del plazo acordado por el equipo y coordiné con los demás integrantes para mantener coherencia entre las secciones. | Trabajar de forma coordinada y dividir la documentación por secciones nos permitió avanzar más rápido sin perder orden ni consistencia en el informe. |
 | | `Barrutia Vaez, Ricardo Andree`<br>`Texto`                                                                                                                                                                          | `Texto 2`                                                                                                                                                                                 |
 | | `Espinoza Inoñan, Fabiola Ximena`<br>`Texto`                                                                                                                                                                        | `Texto 2`                                                                                                                                                                                 |
 | | `[Apellidos, Nombres 4]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 4.]`                                                                                                                                               |
@@ -151,12 +151,12 @@ El equipo está conformado por ocho estudiantes de la carrera de Ingeniería de 
 <table>
 <tr>
 <td width="70%">
-<b>Nombre:</b> [Apellidos, Nombres 1] (<code>[Código 1]</code>)<br><br>
-<b>Rol en el equipo:</b> [Rol]<br><br>
-<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+<b>Nombre:</b> Anampa Lavado, Luis Angel (<code>U202218664</code>)<br><br>
+<b>Rol en el equipo:</b> Backend Developer<br><br>
+<b>Conocimientos técnicos / habilidades:</b> Estudiante de Ingeniería de Software (décimo ciclo, UPC). Actualmente me desempeño en desarrollo de software en el rubro de facturación electrónica. Manejo Java y Golang para backend, con experiencia en despliegue en nube y prácticas DevOps. Aporto al equipo el diseño e implementación de los microservicios de dominio, sus APIs y persistencia.
 </td>
 <td width="30%" align="center">
-<img src="assets/integrante1.png" alt="[Apellidos, Nombres 1]" width="150">
+<img src="assets/Luis_Angel.jpeg" alt="Anampa Lavado, Luis Angel" width="150">
 </td>
 </tr>
 <tr>
@@ -668,7 +668,7 @@ El equipo está conformado por ocho integrantes. Se adopta una organización de 
 | **Product Owner** | `[Apellidos, Nombres 2]` | Custodiar la Product Vision, mantener y priorizar el Product Backlog, aceptar o rechazar los incrementos según criterios de aceptación. |
 | **Arquitecto de Software** | `[Apellidos, Nombres 3]` | Definir la descomposición en microservicios, los contratos entre servicios, los atributos de calidad y las decisiones técnicas registradas como ADR. |
 | **DevOps Engineer** | `[Apellidos, Nombres 4]` | Construir y mantener la Software Factory: pipelines de CI/CD, contenedorización, registro de artefactos, despliegue y observabilidad. |
-| **Backend Developer** | `[Apellidos, Nombres 5]` | Implementar los microservicios de dominio, sus APIs y su persistencia, con sus pruebas unitarias y de integración. |
+| **Backend Developer** | Anampa Lavado, Luis Angel | Implementar los microservicios de dominio, sus APIs y su persistencia, con sus pruebas unitarias y de integración. |
 | **Backend Developer / Data** | `[Apellidos, Nombres 6]` | Implementar el procesamiento del histórico, la agregación para mapas de calor y el componente de detección de reportes falsos y duplicados. |
 | **Mobile Developer** | `[Apellidos, Nombres 7]` | Implementar la aplicación móvil: reporte, mapa, validación y notificaciones. |
 | **Frontend Web Developer / QA** | `[Apellidos, Nombres 8]` | Implementar el panel analítico web y liderar la estrategia de pruebas funcionales y de aceptación. |
