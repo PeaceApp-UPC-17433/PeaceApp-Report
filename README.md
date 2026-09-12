@@ -412,3 +412,14 @@ Escenario actual del ciudadano que necesita desplazarse por la ciudad y del veci
 | **Thinking** | "No sé si esta información es de hoy o de hace un año." | "Esta ruta es más corta, pero no sé si es segura a esta hora." | "Me pudo pasar en cualquier cuadra, nadie lo va a saber." | "Denunciar me va a tomar horas y no va a cambiar nada." | "Sabemos que hay zonas malas, pero no tenemos con qué sustentarlo." |
 | **Feeling** | Desconfianza e incertidumbre. | Inseguridad al decidir. | Miedo, vulnerabilidad e impotencia. | Frustración y desánimo. | Impotencia frente a la falta de evidencia. |
 | **Pain points** | Información dispersa, desactualizada, no georreferenciada y sin verificación. | Ninguna app de rutas incorpora el riesgo como variable de decisión. | No existe un canal inmediato para dejar registro del hecho. | La denuncia formal es lenta, el subregistro es alto y el aporte en grupos de mensajería se pierde. | La estadística oficial llega agregada y con meses de retraso; no permite priorizar cuadras ni horarios. |
+
+### 1.3.2. To-Be Scenario Mapping
+
+Escenario objetivo con PeaceApp operando.
+
+| Fases | 1. Consultar el riesgo de la zona | 2. Planificar el desplazamiento | 3. Ocurrencia del incidente | 4. Reportar y validar | 5. Actuar sobre los puntos críticos |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Doing** | Abre PeaceApp y consulta el mapa de calor filtrado por su zona, franja horaria y tipo de incidente. | Solicita la ruta hacia su destino y recibe alternativas ordenadas por índice de riesgo, no solo por tiempo. | Sufre o presencia un incidente y abre el formulario rápido de reporte. | Registra ubicación, tipo y evidencia en menos de un minuto; usuarios cercanos confirman o descartan y la plataforma filtra duplicados y reportes falsos. | La junta vecinal, el serenazgo o el gobierno local revisa el panel analítico por zona, horario y tipo, y programa el patrullaje sobre los puntos críticos. |
+| **Thinking** | "Esta información es de hoy y otras personas ya la validaron." | "Tomo cinco minutos más y evito el tramo con más incidencias a esta hora." | "Reportar me toma menos de un minuto y sirve a los demás." | "Mi reporte tiene peso porque mi historial es confiable." | "Tenemos evidencia georreferenciada para sustentar dónde intervenir." |
+| **Feeling** | Confianza y control. | Tranquilidad al decidir. | Capacidad de reacción. | Sentido de contribución a la comunidad. | Respaldo para tomar decisiones y rendir cuentas. |
+| **Gains** | Información oportuna, georreferenciada y validada por la comunidad. | El riesgo se vuelve una variable explícita de la decisión de ruta y horario. | Canal inmediato y accesible desde el celular, con opción de reporte anónimo. | Confiabilidad sostenida por validación comunitaria, reputación y detección de falsos y duplicados. | Priorización preventiva basada en datos y medición del efecto de la intervención. |
