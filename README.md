@@ -144,3 +144,96 @@ El curso **1ASI0548 - Agile Software Factories** contribuye al desarrollo del si
 | **5.2.** Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos. | El equipo definió la estrategia Agile (Scrum con sprints de dos semanas), distribuyó roles formales, construyó el Product Backlog inicial y acordó la estrategia de Software Factory documentada en la sección 1.6. | La organización formal del equipo y la trazabilidad *Product Backlog → User Stories → Sprint Backlog* permitieron cerrar el Primer Avance con entregables verificables en el repositorio. |
 
 ---
+
+# Perfiles de los Integrantes del Equipo
+
+**Startup:** PeaceApp
+
+PeaceApp nace como respuesta a la inseguridad ciudadana en el Perú. Nuestra misión es que cualquier persona pueda desplazarse por la ciudad con información confiable, actualizada y verificada sobre los riesgos de su ruta. Nuestra visión es consolidarnos como la plataforma de referencia en inteligencia colaborativa de seguridad ciudadana en Latinoamérica, convirtiendo el reporte ciudadano en prevención basada en datos.
+
+El equipo está conformado por ocho estudiantes de la carrera de Ingeniería de Software, con perfiles complementarios en desarrollo backend, desarrollo frontend y móvil, calidad de software, arquitectura, datos y prácticas DevOps.
+
+<table>
+<tr>
+<td width="70%">
+<b>Nombre:</b> [Apellidos, Nombres 1] (<code>[Código 1]</code>)<br><br>
+<b>Rol en el equipo:</b> [Rol]<br><br>
+<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+</td>
+<td width="30%" align="center">
+<img src="assets/integrante1.png" alt="[Apellidos, Nombres 1]" width="150">
+</td>
+</tr>
+<tr>
+<td width="70%">
+<b>Nombre:</b> [Apellidos, Nombres 2] (<code>[Código 2]</code>)<br><br>
+<b>Rol en el equipo:</b> [Rol]<br><br>
+<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+</td>
+<td width="30%" align="center">
+<img src="assets/integrante2.png" alt="[Apellidos, Nombres 2]" width="150">
+</td>
+</tr>
+<tr>
+<td width="70%">
+<b>Nombre:</b> [Apellidos, Nombres 3] (<code>[Código 3]</code>)<br><br>
+<b>Rol en el equipo:</b> [Rol]<br><br>
+<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+</td>
+<td width="30%" align="center">
+<img src="assets/integrante3.png" alt="[Apellidos, Nombres 3]" width="150">
+</td>
+</tr>
+<tr>
+<td width="70%">
+<b>Nombre:</b> [Apellidos, Nombres 4] (<code>[Código 4]</code>)<br><br>
+<b>Rol en el equipo:</b> [Rol]<br><br>
+<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+</td>
+<td width="30%" align="center">
+<img src="assets/integrante4.png" alt="[Apellidos, Nombres 4]" width="150">
+</td>
+</tr>
+<tr>
+<td width="70%">
+<b>Nombre:</b> [Apellidos, Nombres 5] (<code>[Código 5]</code>)<br><br>
+<b>Rol en el equipo:</b> [Rol]<br><br>
+<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+</td>
+<td width="30%" align="center">
+<img src="assets/integrante5.png" alt="[Apellidos, Nombres 5]" width="150">
+</td>
+</tr>
+<tr>
+<td width="70%">
+<b>Nombre:</b> [Apellidos, Nombres 6] (<code>[Código 6]</code>)<br><br>
+<b>Rol en el equipo:</b> [Rol]<br><br>
+<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+</td>
+<td width="30%" align="center">
+<img src="assets/integrante6.png" alt="[Apellidos, Nombres 6]" width="150">
+</td>
+</tr>
+<tr>
+<td width="70%">
+<b>Nombre:</b> [Apellidos, Nombres 7] (<code>[Código 7]</code>)<br><br>
+<b>Rol en el equipo:</b> [Rol]<br><br>
+<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+</td>
+<td width="30%" align="center">
+<img src="assets/integrante7.png" alt="[Apellidos, Nombres 7]" width="150">
+</td>
+</tr>
+<tr>
+<td width="70%">
+<b>Nombre:</b> [Apellidos, Nombres 8] (<code>[Código 8]</code>)<br><br>
+<b>Rol en el equipo:</b> [Rol]<br><br>
+<b>Conocimientos técnicos / habilidades:</b> [Describir carrera, ciclo, lenguajes, frameworks, herramientas y aporte esperado al equipo.]
+</td>
+<td width="30%" align="center">
+<img src="assets/integrante8.png" alt="[Apellidos, Nombres 8]" width="150">
+</td>
+</tr>
+</table>
+
+---
