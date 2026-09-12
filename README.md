@@ -399,3 +399,16 @@ PeaceApp es una plataforma móvil y web que construye un mapa colaborativo de ro
 | **Objetivos de negocio** | Alcanzar una densidad de reportes suficiente para publicar índices de riesgo confiables en las zonas piloto y validar el panel analítico con al menos una organización vecinal o municipal. |
 
 ---
+
+## 1.3. Requirements Specification
+
+### 1.3.1. As-Is Scenario Mapping
+
+Escenario actual del ciudadano que necesita desplazarse por la ciudad y del vecino o autoridad que necesita actuar sobre los puntos críticos.
+
+| Fases | 1. Buscar información sobre la seguridad de la zona | 2. Planificar el desplazamiento | 3. Ocurrencia del incidente | 4. Reportar o compartir lo ocurrido | 5. Actuar sobre los puntos críticos |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Doing** | Revisa noticias, pregunta en grupos de WhatsApp del barrio y consulta comentarios sueltos en redes sociales. | Abre una app de mapas y elige la ruta más corta o más rápida; el criterio de seguridad no existe como variable. | Sufre o presencia un robo, un accidente o un siniestro en la vía pública. | Comenta el hecho en el grupo vecinal; en pocos casos acude a la comisaría a denunciar. | La junta vecinal o el serenazgo organiza rondas según reclamos verbales y percepción. |
+| **Thinking** | "No sé si esta información es de hoy o de hace un año." | "Esta ruta es más corta, pero no sé si es segura a esta hora." | "Me pudo pasar en cualquier cuadra, nadie lo va a saber." | "Denunciar me va a tomar horas y no va a cambiar nada." | "Sabemos que hay zonas malas, pero no tenemos con qué sustentarlo." |
+| **Feeling** | Desconfianza e incertidumbre. | Inseguridad al decidir. | Miedo, vulnerabilidad e impotencia. | Frustración y desánimo. | Impotencia frente a la falta de evidencia. |
+| **Pain points** | Información dispersa, desactualizada, no georreferenciada y sin verificación. | Ninguna app de rutas incorpora el riesgo como variable de decisión. | No existe un canal inmediato para dejar registro del hecho. | La denuncia formal es lenta, el subregistro es alto y el aporte en grupos de mensajería se pierde. | La estadística oficial llega agregada y con meses de retraso; no permite priorizar cuadras ni horarios. |
