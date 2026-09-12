@@ -581,3 +581,82 @@ Estimación en *story points* con la serie de Fibonacci (1, 2, 3, 5, 8, 13) medi
 | Technical Stories | 8 |
 
 ---
+
+## 1.4. Estrategia Agile
+
+### 1.4.1. Marco de trabajo seleccionado
+
+El equipo adopta **Scrum** como marco de trabajo principal, complementado con prácticas de **Kanban** para la gestión del trabajo en curso y con prácticas de **Extreme Programming** (integración continua, pruebas automatizadas y propiedad colectiva del código) para las actividades de construcción.
+
+**Justificación.** El producto tiene un alcance con incertidumbre alta en el componente de confiabilidad (validación comunitaria y detección de reportes falsos), por lo que se requiere un ciclo corto de inspección y adaptación. Scrum ofrece esa cadencia mediante sprints con incrementos potencialmente entregables, y encaja con la exigencia del curso de demostrar desarrollo incremental y trazabilidad completa entre artefactos. Las prácticas Kanban (tablero con columnas explícitas y límites de trabajo en curso) se incorporan porque un equipo de ocho integrantes con disponibilidad parcial tiende a acumular trabajo iniciado y no terminado.
+
+| Elemento | Decisión |
+| :--- | :--- |
+| Duración del sprint | 2 semanas |
+| Número estimado de sprints en el ciclo | 6 |
+| Capacidad estimada por sprint | 30 a 36 story points (velocidad inicial supuesta, a calibrar tras el Sprint 1) |
+| Tablero | GitHub Projects con columnas *Backlog → Ready → In Progress → In Review → Testing → Done* |
+| Límite de trabajo en curso | Máximo 2 work-items simultáneos por integrante |
+| Unidad de estimación | Story points (Fibonacci: 1, 2, 3, 5, 8, 13) |
+| Técnica de estimación | Planning Poker |
+| Técnica de priorización | MoSCoW, con desempate por relación valor/esfuerzo |
+
+### 1.4.2. Cadencia y ceremonias
+
+| Ceremonia | Frecuencia | Duración | Participantes | Propósito y salida |
+| :--- | :--- | :---: | :--- | :--- |
+| **Sprint Planning** | Al inicio de cada sprint | 2 h | Equipo completo | Definir el Sprint Goal, seleccionar los ítems del Product Backlog y descomponerlos en work-items con responsable. Salida: Sprint Backlog. |
+| **Daily Scrum** | Diario (asíncrono en días sin clase) | 15 min | Development Team | Sincronizar avance e identificar impedimentos. Salida: tablero actualizado y lista de impedimentos. |
+| **Refinement** | Semanal | 1 h | Product Owner y Development Team | Detallar, estimar y ordenar los ítems de los próximos dos sprints. Salida: ítems que cumplen la Definition of Ready. |
+| **Sprint Review** | Al cierre de cada sprint | 1 h | Equipo completo y stakeholders | Demostrar el incremento funcionando sobre el entorno desplegado. Salida: retroalimentación y ajustes al Product Backlog. |
+| **Sprint Retrospective** | Al cierre de cada sprint | 45 min | Equipo completo | Inspeccionar el proceso e identificar mejoras. Salida: máximo dos acciones de mejora con responsable y fecha. |
+
+**Registro de ceremonias.** Cada ceremonia deja evidencia en el repositorio o en la herramienta de gestión: el Sprint Backlog en GitHub Projects, los acuerdos de retrospectiva en `docs/retrospectivas/` y la evidencia de la Sprint Review en el informe correspondiente a cada entrega.
+
+### 1.4.3. Definition of Ready y Definition of Done
+
+**Definition of Ready (DoR).** Un ítem puede entrar a un sprint únicamente si:
+
+1. Está redactado en formato de User Story con rol, funcionalidad y beneficio explícitos.
+2. Cuenta con criterios de aceptación en formato Gherkin, verificables y sin ambigüedad.
+3. Está estimado en story points por el equipo.
+4. Sus dependencias técnicas y funcionales están identificadas y resueltas o planificadas.
+5. Tiene identificado el Epic al que pertenece y el objetivo específico que apoya.
+6. Su alcance permite completarlo dentro de un sprint; en caso contrario, se divide.
+
+**Definition of Done (DoD).** Un ítem se considera terminado únicamente si:
+
+1. Cumple todos sus criterios de aceptación, verificados por una persona distinta a quien lo desarrolló.
+2. El código está integrado a `develop` mediante Pull Request con al menos una revisión aprobada.
+3. Cuenta con pruebas unitarias sobre la lógica de dominio y, cuando corresponde, pruebas de integración.
+4. El pipeline de integración continua se ejecuta correctamente, incluyendo el análisis estático y el *quality gate*.
+5. La imagen de contenedor del servicio afectado se construye y publica correctamente.
+6. El incremento queda desplegado en el entorno de pruebas y es accesible para la Sprint Review.
+7. La documentación asociada (README, contrato de API y, si aplica, el informe) está actualizada.
+8. No introduce vulnerabilidades de severidad alta o crítica detectadas por el análisis de dependencias.
+
+### 1.4.4. Estimación y priorización
+
+**Estimación.** Se utiliza *Planning Poker* con la serie de Fibonacci sobre una historia de referencia previamente acordada (US-07, "Categorización del incidente", estimada en 2 puntos). Las diferencias mayores a dos posiciones de la serie se discuten antes de una nueva ronda. Los ítems estimados en 13 puntos se marcan como candidatos a división durante el Refinement.
+
+**Priorización.** Se aplica **MoSCoW** sobre el Product Backlog completo y, dentro de cada categoría, se ordena por la relación entre valor de negocio y esfuerzo. Los criterios de valor considerados son:
+
+| Criterio | Peso | Descripción |
+| :--- | :---: | :--- |
+| Aporte al objetivo del producto | 35 % | Grado en que el ítem habilita uno de los objetivos específicos OE-01 a OE-06. |
+| Habilitación de otros ítems | 25 % | Grado en que desbloquea funcionalidades posteriores (por ejemplo, autenticación o pipeline). |
+| Reducción de riesgo técnico | 20 % | Grado en que reduce incertidumbre arquitectónica o de integración. |
+| Visibilidad para el usuario | 20 % | Grado en que el ítem produce valor perceptible en la Sprint Review. |
+
+**Orden de construcción resultante.** El Sprint 1 concentra las Technical Stories que establecen la Software Factory y la autenticación, porque sin repositorio, pipeline, contenedores y Gateway ningún incremento posterior es verificable ni desplegable. El Sprint 2 entrega el flujo central del producto (reportar, ver en el mapa y validar). Los sprints siguientes incorporan confiabilidad, mapa de calor, rutas y panel institucional.
+
+### 1.4.5. Métricas de proceso
+
+| Métrica | Definición | Meta |
+| :--- | :--- | :--- |
+| Velocidad | Story points completados por sprint que cumplen la DoD. | Estabilizarse con una variación menor al 20 % a partir del Sprint 3. |
+| Sprint Goal Success Rate | Porcentaje de sprints en los que se cumple el Sprint Goal. | Mayor o igual al 80 %. |
+| Lead time de un work-item | Tiempo entre el paso a *In Progress* y el paso a *Done*. | Menor o igual a 4 días. |
+| Tiempo de revisión de Pull Request | Tiempo entre la apertura del PR y su aprobación. | Menor o igual a 24 horas. |
+| Tasa de fallos del pipeline | Porcentaje de ejecuciones fallidas sobre el total. | Menor o igual al 15 %. |
+| Distribución de la carga | Diferencia entre los story points completados por cada integrante. | Variación menor al 20 %. |
