@@ -423,3 +423,17 @@ Escenario objetivo con PeaceApp operando.
 | **Thinking** | "Esta información es de hoy y otras personas ya la validaron." | "Tomo cinco minutos más y evito el tramo con más incidencias a esta hora." | "Reportar me toma menos de un minuto y sirve a los demás." | "Mi reporte tiene peso porque mi historial es confiable." | "Tenemos evidencia georreferenciada para sustentar dónde intervenir." |
 | **Feeling** | Confianza y control. | Tranquilidad al decidir. | Capacidad de reacción. | Sentido de contribución a la comunidad. | Respaldo para tomar decisiones y rendir cuentas. |
 | **Gains** | Información oportuna, georreferenciada y validada por la comunidad. | El riesgo se vuelve una variable explícita de la decisión de ruta y horario. | Canal inmediato y accesible desde el celular, con opción de reporte anónimo. | Confiabilidad sostenida por validación comunitaria, reputación y detección de falsos y duplicados. | Priorización preventiva basada en datos y medición del efecto de la intervención. |
+
+### 1.3.3. Epics
+
+| ID | Epic | Descripción | Objetivo relacionado |
+| :---: | :--- | :--- | :---: |
+| **EP-01** | Gestión de identidad y perfil | Registro, autenticación, gestión de perfil, reputación y modo de reporte anónimo. | OE-02 |
+| **EP-02** | Reporte de incidentes georreferenciados | Creación, categorización, adjuntos de evidencia y edición de reportes con ubicación. | OE-01 |
+| **EP-03** | Validación comunitaria y reputación | Confirmación y descarte de reportes por usuarios cercanos y cálculo del puntaje de reputación. | OE-02 |
+| **EP-04** | Confiabilidad de la información | Detección de reportes duplicados y falsos, moderación y apelación. | OE-03 |
+| **EP-05** | Visualización y mapa de calor | Mapa en tiempo real, mapa de calor por franja horaria y filtros de consulta. | OE-04 |
+| **EP-06** | Rutas de menor riesgo | Cálculo y presentación de rutas alternativas ponderadas por índice de riesgo. | OE-04 |
+| **EP-07** | Notificaciones y alertas | Alertas de proximidad y resúmenes por zona de interés. | OE-04 |
+| **EP-08** | Panel analítico institucional | Tablero web con indicadores por zona, horario y tipo de incidente, y exportación de datos. | OE-05 |
+| **EP-09** | Plataforma, arquitectura y Software Factory | Microservicios, contenedorización, API Gateway, CI/CD, observabilidad y seguridad. | OE-06 |
