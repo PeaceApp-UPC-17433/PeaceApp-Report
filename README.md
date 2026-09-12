@@ -939,3 +939,14 @@ Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to
 Congreso de la República del Perú. (2011). *Ley N.° 29733, Ley de Protección de Datos Personales*. Diario Oficial El Peruano.
 
 ---
+
+# Anexos
+
+| Anexo | Descripción | Enlace |
+| :---: | :--- | :--- |
+| **A** | Repositorio del informe y del producto | `[URL del repositorio]` |
+| **B** | Tablero del Product Backlog y Sprint Backlogs (GitHub Projects) | `[URL del tablero]` |
+| **C** | Enunciado del Final Project del curso | `docs/enunciado/` |
+| **D** | Registro de Architecture Decision Records | `docs/adr/` |
+| **E** | Actas de retrospectiva por sprint | `docs/retrospectivas/` |
+| **F** | Video de exposición del Primer Avance | `[URL del video]` |
