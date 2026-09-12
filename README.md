@@ -921,3 +921,21 @@ flowchart TB
 6. Mantener la disciplina de un commit por sección o entregable completado, dado que el historial del repositorio es la evidencia principal del aporte individual en la evaluación del curso.
 
 ---
+
+# Bibliografía
+
+Burns, B., Beda, J., & Hightower, K. (2022). *Kubernetes: Up and running* (3rd ed.). O'Reilly Media.
+
+Forsgren, N., Humble, J., & Kim, G. (2018). *Accelerate: The science of lean software and DevOps: Building and scaling high performing technology organizations*. IT Revolution Press.
+
+Instituto Nacional de Estadística e Informática. (2024). *Informe técnico: Estadísticas de seguridad ciudadana*. INEI.
+
+Kim, G., Humble, J., Debois, P., & Willis, J. (2021). *The DevOps handbook: How to create world-class agility, reliability, and security in technology organizations* (2nd ed.). IT Revolution Press.
+
+Newman, S. (2021). *Building microservices: Designing fine-grained systems* (2nd ed.). O'Reilly Media.
+
+Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to Scrum: The rules of the game*. Scrum.org.
+
+Congreso de la República del Perú. (2011). *Ley N.° 29733, Ley de Protección de Datos Personales*. Diario Oficial El Peruano.
+
+---
