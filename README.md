@@ -62,3 +62,20 @@
 | 1.3 | `[DD/MM/YYYY]` | `[Autor]` | `[Trabajo Final - TB4]` |
 
 ---
+
+# Project Report Collaboration Insights
+
+**Repositorio del informe:** `[URL del repositorio]`
+
+**Estrategia de colaboración:** el informe se versiona en GitHub bajo el flujo **GitFlow simplificado** definido en la sección 1.6.3. La rama `main` contiene únicamente las versiones entregables del informe; la rama `develop` integra el trabajo en curso, y cada integrante trabaja sobre una rama `feature/<seccion>` que se integra vía Pull Request con revisión de al menos un compañero.
+
+**Convención de commits:** se aplica *Conventional Commits*, con un commit por cada sección o título completado (no un commit único por capítulo), de modo que la trazabilidad del aporte individual sea verificable en el historial.
+
+| Entrega | Estado | Evidencia |
+| :--- | :---: | :--- |
+| Primer Avance - Semana 03 | Completado | Commits e historial de la rama `develop` integrados a `main` vía Pull Request. |
+| Segundo Avance | Pendiente | `[Por completar]` |
+| Trabajo Parcial (TB2) | Pendiente | `[Por completar]` |
+| Trabajo Final (TB4) | Pendiente | `[Por completar]` |
+
+---
