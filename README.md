@@ -57,9 +57,6 @@
 | Versión | Fecha | Autor | Descripción de la modificación |
 | :---: | :---: | :--- | :--- |
 | 1.0 | 12/09/2026 | Equipo PeaceApp | Primer Avance (Semana 03): descripción del producto, problema y necesidad, Product Vision, objetivos, alcance inicial, As-Is, To-Be, User Stories iniciales, Product Backlog inicial, estrategia Agile, organización del equipo, estrategia inicial de Software Factory y herramientas seleccionadas. |
-| 1.1 | `[DD/MM/YYYY]` | `[Autor]` | `[Segundo Avance]` |
-| 1.2 | `[DD/MM/YYYY]` | `[Autor]` | `[Trabajo Parcial - TB2]` |
-| 1.3 | `[DD/MM/YYYY]` | `[Autor]` | `[Trabajo Final - TB4]` |
 
 ---
 
@@ -133,7 +130,7 @@ El curso **1ASI0548 - Agile Software Factories** contribuye al desarrollo del si
 | :--- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **5.1.** Reconoce la contribución individual dentro de un equipo. | `[Apellidos, Nombres 1]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 1.]`                                                                                                                                               |
 | | `Barrutia Vaez, Ricardo Andree`<br>`Texto`                                                                                                                                                                          | `Texto 2`                                                                                                                                                                                 |
-| | `[Apellidos, Nombres 3]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 3.]`                                                                                                                                               |
+| | `Espinoza Inoñan, Fabiola Ximena`<br>`Texto`                                                                                                                                                                        | `Texto 2`                                                                                                                                                                                 |
 | | `[Apellidos, Nombres 4]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 4.]`                                                                                                                                               |
 | | `[Apellidos, Nombres 5]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 5.]`                                                                                                                                               |
 | | `[Apellidos, Nombres 6]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]`                                                                                                       | `[Conclusión individual del integrante 6.]`                                                                                                                                               |
@@ -940,11 +937,7 @@ Congreso de la República del Perú. (2011). *Ley N.° 29733, Ley de Protección
 
 # Anexos
 
-| Anexo | Descripción | Enlace |
-| :---: | :--- | :--- |
-| **A** | Repositorio del informe y del producto | `[URL del repositorio]` |
-| **B** | Tablero del Product Backlog y Sprint Backlogs (GitHub Projects) | `[URL del tablero]` |
-| **C** | Enunciado del Final Project del curso | `docs/enunciado/` |
-| **D** | Registro de Architecture Decision Records | `docs/adr/` |
-| **E** | Actas de retrospectiva por sprint | `docs/retrospectivas/` |
-| **F** | Video de exposición del Primer Avance | `[URL del video]` |
+| Anexo | Descripción | Enlace                 |
+|:-----:| :--- |:-----------------------|
+| **A** | Repositorio del informe y del producto | `https://github.com/PeaceApp-UPC-17433/PeaceApp-Report`                     |
+| **B** | Video de exposición del Primer Avance | `[URL del video]`      |
