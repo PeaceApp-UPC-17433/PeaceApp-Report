@@ -891,3 +891,33 @@ flowchart TB
 | Principio de menor privilegio | Permisos mínimos por servicio y por token del pipeline. | Deploy / Operate |
 
 ---
+
+# Conclusiones y recomendaciones
+
+**Conclusiones.**
+
+1. El problema abordado está delimitado y sustentado: la brecha no es la ausencia de datos de seguridad ciudadana, sino su falta de oportunidad, georreferenciación y verificabilidad. Esa delimitación es la que justifica que la validación comunitaria y la detección de reportes falsos sean funcionalidades centrales del producto y no complementos opcionales.
+
+2. La Product Vision y los seis objetivos específicos permiten evaluar el avance con indicadores verificables, evitando que la evaluación del producto dependa únicamente del número de funcionalidades construidas.
+
+3. El Product Backlog inicial de 37 ítems y 189 story points, con trazabilidad explícita hacia los Epics y los objetivos específicos, ofrece una base suficiente para planificar los seis sprints previstos en el ciclo y para sostener la trazabilidad exigida por el curso.
+
+4. Situar las Technical Stories de la Software Factory en el Sprint 1 es una decisión deliberada: sin repositorio protegido, pipeline, contenedores y Gateway, ningún incremento posterior sería verificable ni desplegable, y la automatización tendería a postergarse hasta el final del ciclo.
+
+5. La organización de ocho integrantes como un equipo único multifuncional, con roles formales y una matriz RACI explícita, reduce el riesgo de trabajo aislado y de concentración del conocimiento, que es el riesgo principal en equipos numerosos con disponibilidad parcial.
+
+**Recomendaciones.**
+
+1. Calibrar la velocidad real del equipo al cierre del Sprint 1 y ajustar la capacidad planificada, en lugar de sostener la estimación inicial de 30 a 36 story points por sprint.
+
+2. Dividir durante el Refinement las historias estimadas en 13 puntos (US-20, US-15 y US-22) antes de incorporarlas a un sprint, para evitar trabajo no terminado al cierre.
+
+3. Validar tempranamente con al menos una junta vecinal o municipalidad los indicadores del panel analítico, porque el valor de ese módulo depende de que los indicadores coincidan con los criterios reales de asignación de patrullaje.
+
+4. Definir desde el Sprint 1 el umbral mínimo de reportes por celda geográfica para publicar un índice de riesgo, ya que un mapa de calor construido sobre datos escasos produce conclusiones erróneas y erosiona la confianza en el producto.
+
+5. Registrar las decisiones arquitectónicas como ADR desde la primera semana de construcción, de modo que la descomposición en microservicios pueda sustentarse ante el docente con el razonamiento y no solo con el diagrama resultante.
+
+6. Mantener la disciplina de un commit por sección o entregable completado, dado que el historial del repositorio es la evidencia principal del aporte individual en la evaluación del curso.
+
+---
