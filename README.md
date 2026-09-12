@@ -35,7 +35,7 @@
 
 | Código | Apellidos y Nombres |
 | :---: | :--- |
-| `[Código 1]` | Anampa Lavado, Luis Angel |
+| `U202218664` | Anampa Lavado, Luis Angel |
 | `[Código 2]` | `[Apellidos, Nombres 2]` |
 | `[Código 3]` | `[Apellidos, Nombres 3]` |
 | `[Código 4]` | `[Apellidos, Nombres 4]` |
@@ -133,7 +133,7 @@ El curso **1ASI0548 - Agile Software Factories** contribuye al desarrollo del si
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **5.1.** Reconoce la contribución individual dentro de un equipo. | Anampa Lavado, Luis Angel<br>Me encargué de redactar y estructurar parte de la documentación del Primer Avance junto con mis compañeros, dividiéndonos las secciones del informe para avanzar en paralelo. Completé mi parte dentro del plazo acordado por el equipo y coordiné con los demás integrantes para mantener coherencia entre las secciones. | Trabajar de forma coordinada y dividir la documentación por secciones nos permitió avanzar más rápido sin perder orden ni consistencia en el informe. |
+| **5.1.** Reconoce la contribución individual dentro de un equipo. | Anampa Lavado, Luis Angel<br>Aportó como Backend Developer en la definición de la Product Vision, el Product Backlog inicial y la estrategia de Software Factory, con énfasis en el diseño de los microservicios de dominio y la selección de herramientas. | El trabajo colaborativo en GitFlow permitió versionar el aporte individual con trazabilidad completa mediante Pull Requests y Conventional Commits. |
 | | `[Apellidos, Nombres 2]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 2.]` |
 | | `[Apellidos, Nombres 3]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 3.]` |
 | | `[Apellidos, Nombres 4]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 4.]` |
@@ -156,9 +156,9 @@ El equipo está conformado por ocho estudiantes de la carrera de Ingeniería de 
 <table>
 <tr>
 <td width="70%">
-<b>Nombre:</b> Anampa Lavado, Luis Angel (<code>[Código 1]</code>)<br><br>
-<b>Rol en el equipo:</b> Backend Developer<br><br>
-<b>Conocimientos técnicos / habilidades:</b> Estudiante de Ingeniería de Software (décimo ciclo, UPC). Actualmente se desempeña en desarrollo de software en el rubro de facturación electrónica. Dominio de Java y Golang para backend, experiencia en despliegue en nube y prácticas DevOps. Aporta al equipo el diseño e implementación de los microservicios de dominio, sus APIs y persistencia.
+<b>Nombre:</b> Anampa Lavado, Luis Angel (<code>U202218664</code>)<br><br>
+<b>Rol en el equipo:</b>Backend Developer<br><br>
+<b>Conocimientos técnicos / habilidades:</b> Estudiante de Ingeniería de Software (octavo ciclo, UPC). Actualmente se desempeña en desarrollo de software en el rubro de facturación electrónica. Dominio de Java y Golang para backend, experiencia en despliegue en nube y prácticas DevOps. Aporta al equipo el diseño e implementación de los microservicios de dominio, sus APIs y persistencia.
 </td>
 <td width="30%" align="center">
 <img src="assets/integrante1.png" alt="Anampa Lavado, Luis Angel" width="150">
