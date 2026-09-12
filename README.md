@@ -717,3 +717,177 @@ El equipo está conformado por ocho integrantes. Se adopta una organización de 
 6. Nadie integra su propio Pull Request sin la aprobación de otro integrante.
 
 ---
+
+## 1.6. Estrategia inicial de Software Factory
+
+La **Software Factory** de PeaceApp es el conjunto integrado de prácticas, automatizaciones y herramientas que permite pasar de una User Story priorizada a un incremento desplegado y observable, con intervención manual mínima y trazabilidad verificable en cada etapa.
+
+**Principios rectores.**
+
+1. **Todo como código.** Configuración, infraestructura, pipelines y contratos de API se versionan en el repositorio.
+2. **Automatización progresiva.** Cada entrega incorpora al menos una etapa adicional automatizada respecto de la anterior.
+3. **Calidad incorporada, no inspeccionada al final.** Las pruebas y el análisis estático son condición de integración, no una actividad posterior.
+4. **Seguridad desde el inicio (DevSecOps).** El escaneo de dependencias y de secretos forma parte del pipeline desde el Sprint 1.
+5. **Trazabilidad de extremo a extremo.** Product Backlog → User Story → Work-item → Rama → Commit → Pull Request → Build → Prueba → Artefacto → Despliegue.
+
+### 1.6.1. Flujo Plan → Code → Build → Test → Release → Deploy → Operate
+
+```mermaid
+flowchart LR
+    A["PLAN<br/>GitHub Projects"] --> B["CODE<br/>GitHub + GitFlow"]
+    B --> C["BUILD<br/>GitHub Actions + Docker"]
+    C --> D["TEST<br/>JUnit / Jest / Newman<br/>SonarCloud"]
+    D --> E["RELEASE<br/>GHCR + SemVer"]
+    E --> F["DEPLOY<br/>Kubernetes / Cloud"]
+    F --> G["OPERATE<br/>Prometheus + Grafana"]
+    G -. "retroalimentación<br/>métricas e incidencias" .-> A
+```
+
+| Etapa | Qué ocurre | Automatización inicial (Semana 03 – Sprint 1) | Automatización objetivo (fin de ciclo) |
+| :--- | :--- | :--- | :--- |
+| **Plan** | El Product Owner prioriza el Product Backlog; el equipo descompone las historias seleccionadas en work-items con responsable y estimación. | Tablero en GitHub Projects con automatizaciones de estado vinculadas a Issues y Pull Requests. | Enlace automático entre Issue, rama, Pull Request y despliegue, con reporte de velocidad y lead time. |
+| **Code** | Desarrollo sobre ramas `feature/*` a partir de `develop`, con revisión por pares obligatoria. | Reglas de protección de ramas, plantilla de Pull Request y convención de commits. | Revisión asistida por análisis automático y verificación de la convención de commits en el pipeline. |
+| **Build** | Compilación del servicio y construcción de la imagen de contenedor. | Workflow de GitHub Actions que compila y construye la imagen en cada Pull Request. | Build por servicio afectado (*matrix build*), caché de dependencias y publicación automática de la imagen. |
+| **Test** | Ejecución de pruebas unitarias, de integración y de contrato de API; análisis estático y de dependencias. | Pruebas unitarias obligatorias como *check* del Pull Request. | Pirámide de pruebas completa con cobertura mínima exigida, pruebas de contrato y *quality gate* bloqueante. |
+| **Release** | Versionado del artefacto y publicación en el registro. | Etiquetado de imágenes con versión semántica y hash de commit. | Generación automática del *changelog* y promoción de artefactos entre entornos. |
+| **Deploy** | Despliegue del incremento en el entorno correspondiente. | Despliegue automático a entorno de pruebas al integrar en `develop`. | Despliegue a producción desde `main` con estrategia de actualización progresiva y *rollback* automatizado. |
+| **Operate** | Monitoreo de disponibilidad, latencia, errores y uso; gestión de incidencias. | Health checks por servicio y logs centralizados. | Tablero de métricas, alertas sobre umbrales y trazabilidad distribuida entre servicios. |
+
+### 1.6.2. Herramientas seleccionadas
+
+| Etapa | Herramienta | Propósito | Justificación de la selección |
+| :--- | :--- | :--- | :--- |
+| **Plan** | GitHub Projects | Tablero del Product Backlog y de los Sprint Backlogs. | Integración nativa con Issues y Pull Requests: elimina la duplicación de estado entre la gestión y el código. |
+| **Plan** | GitHub Issues | Registro de User Stories, work-items, defectos e impedimentos. | Permite enlazar cada cambio de código a su historia, sosteniendo la trazabilidad exigida. |
+| **Code** | Git + GitHub | Control de versiones y colaboración. | Estándar de la industria, gratuito para el equipo y base de las demás automatizaciones. |
+| **Code** | GitFlow simplificado (`main` / `develop` / `feature/*`) | Estrategia de ramas. | Separa la versión entregable de la versión en integración; ver sección 1.6.3. |
+| **Code** | Conventional Commits | Convención de mensajes de commit. | Habilita la generación automática de *changelog* y hace legible el historial. |
+| **Code** | Visual Studio Code / IntelliJ IDEA | Entorno de desarrollo. | Disponibilidad de licencia educativa y soporte para los lenguajes del proyecto. |
+| **Build** | GitHub Actions | Motor de integración y entrega continua. | Incluido en el repositorio, sin infraestructura adicional que administrar, con minutos gratuitos suficientes para el proyecto. |
+| **Build** | Docker | Contenedorización de los servicios. | Requisito del curso y condición para la paridad entre entornos y el despliegue en Kubernetes. |
+| **Build** | Maven / Gradle y npm | Gestión de dependencias y automatización de build. | Ecosistemas estándar de los lenguajes seleccionados. |
+| **Test** | JUnit 5 y Mockito | Pruebas unitarias del backend. | Estándar en el ecosistema Java/Spring Boot. |
+| **Test** | Jest y Testing Library | Pruebas unitarias del frontend web. | Estándar en el ecosistema JavaScript/TypeScript. |
+| **Test** | Postman / Newman | Pruebas de API automatizadas en el pipeline. | Permite versionar colecciones de pruebas y ejecutarlas de forma desatendida. |
+| **Test** | SonarCloud | Análisis estático, calidad y *quality gate*. | Gratuito para repositorios públicos y con integración directa como *check* de Pull Request. |
+| **Test** | Dependabot y escaneo de secretos de GitHub | Análisis de dependencias vulnerables y detección de credenciales expuestas. | Activables desde el repositorio sin costo, cubren las prácticas DevSecOps mínimas. |
+| **Release** | GitHub Container Registry (GHCR) | Registro de artefactos de contenedor. | Integrado al repositorio y a los permisos del equipo; evita administrar un registro externo. |
+| **Release** | Versionado semántico (SemVer) | Identificación de versiones de los artefactos. | Convención clara para la promoción entre entornos y la trazabilidad de despliegues. |
+| **Deploy** | Kubernetes | Administración de cargas de trabajo y servicios. | Requisito del curso; provee escalamiento, autorreparación y despliegue progresivo. |
+| **Deploy** | Proveedor cloud con créditos académicos (Azure AKS, Google GKE o equivalente) | Entorno de ejecución. | Cumple el requisito de despliegue en cloud dentro de la restricción presupuestal del proyecto. |
+| **Deploy** | Docker Compose | Entorno local de desarrollo integrado. | Permite levantar el conjunto de servicios en la máquina de cada integrante antes de desplegar. |
+| **Operate** | Prometheus y Grafana | Métricas y tableros de observabilidad. | Estándar abierto, integrable con Kubernetes sin costo de licencia. |
+| **Operate** | Logs centralizados del clúster | Diagnóstico de incidencias. | Cubre la necesidad de observabilidad sin introducir una plataforma comercial. |
+| **Documentación** | OpenAPI / Swagger | Contratos de API. | Habilita pruebas de contrato y documentación generada desde el código. |
+| **Documentación** | Markdown en el repositorio | Informe y documentación técnica. | Mantiene la documentación versionada junto al código, con historial por sección. |
+
+### 1.6.3. Source Code Management y estrategia de ramas
+
+Se adopta un **GitFlow simplificado** con dos ramas permanentes y ramas temporales por unidad de trabajo.
+
+```mermaid
+gitGraph
+    commit id: "init"
+    branch develop
+    checkout develop
+    commit id: "setup"
+    branch feature/US-06-reporte
+    checkout feature/US-06-reporte
+    commit id: "feat(reporte)"
+    commit id: "test(reporte)"
+    checkout develop
+    merge feature/US-06-reporte id: "PR #12"
+    branch feature/US-18-mapa
+    checkout feature/US-18-mapa
+    commit id: "feat(mapa)"
+    checkout develop
+    merge feature/US-18-mapa id: "PR #15"
+    checkout main
+    merge develop id: "release v1.0.0" tag: "v1.0.0"
+```
+
+| Rama | Propósito | Reglas |
+| :--- | :--- | :--- |
+| `main` | Contiene únicamente versiones entregables y etiquetadas. | Protegida. Sin push directo. Solo recibe merge desde `develop` o `hotfix/*` vía Pull Request aprobado y con el pipeline en verde. Cada merge genera una etiqueta SemVer. |
+| `develop` | Rama de integración del trabajo en curso. | Protegida. Sin push directo. Recibe merge desde `feature/*` vía Pull Request con al menos una revisión aprobada. |
+| `feature/<ID>-<slug>` | Una rama por User Story o Technical Story. | Nace de `develop` y se elimina tras el merge. Ejemplo: `feature/US-06-registro-rapido-incidente`. |
+| `hotfix/<slug>` | Corrección urgente sobre una versión entregada. | Nace de `main`, se integra a `main` y a `develop`. |
+| `docs/<slug>` | Cambios exclusivos de documentación e informe. | Nace de `develop` y sigue el mismo flujo de revisión. |
+
+**Convención de commits (Conventional Commits).**
+
+```
+<tipo>(<alcance>): <descripción en imperativo>
+
+[cuerpo opcional]
+
+Refs: #<número de issue>
+```
+
+| Tipo | Uso |
+| :--- | :--- |
+| `feat` | Nueva funcionalidad. |
+| `fix` | Corrección de un defecto. |
+| `docs` | Cambios en documentación o en el informe. |
+| `test` | Incorporación o corrección de pruebas. |
+| `refactor` | Cambio interno sin alterar el comportamiento. |
+| `chore` | Tareas de configuración, dependencias o infraestructura. |
+| `ci` | Cambios en los pipelines. |
+
+Ejemplo: `docs(capitulo-1): agregar To-Be Scenario Mapping`
+
+**Política de Pull Request.** Toda integración requiere: título con el identificador de la historia, descripción del cambio, enlace al Issue, evidencia de la verificación de criterios de aceptación, al menos una revisión aprobada por un integrante distinto al autor y la totalidad de los *checks* automáticos en verde.
+
+### 1.6.4. Arquitectura objetivo y candidatos a microservicios
+
+La descomposición se realiza por subdominio del negocio, buscando servicios con responsabilidad única, límites transaccionales propios y evolución independiente.
+
+```mermaid
+flowchart TB
+    subgraph Clientes
+        M["App Móvil<br/>ciudadano"]
+        W["Panel Web<br/>autoridades"]
+    end
+    GW["API Gateway<br/>autenticación · enrutamiento · rate limiting"]
+    M --> GW
+    W --> GW
+    GW --> S1["Identity Service<br/>cuentas · reputación"]
+    GW --> S2["Incident Service<br/>reportes · evidencia"]
+    GW --> S3["Validation Service<br/>validación comunitaria"]
+    GW --> S4["Trust Service<br/>falsos · duplicados"]
+    GW --> S5["Geo Analytics Service<br/>mapa de calor · índices"]
+    GW --> S6["Routing Service<br/>rutas de menor riesgo"]
+    GW --> S7["Notification Service<br/>alertas · resúmenes"]
+    S2 -. eventos .-> S3
+    S3 -. eventos .-> S4
+    S4 -. eventos .-> S5
+    S5 -. consulta .-> S6
+    S5 -. eventos .-> S7
+```
+
+| Servicio | Responsabilidad | Historias asociadas |
+| :--- | :--- | :--- |
+| **Identity Service** | Registro, autenticación, perfil, zonas de interés y reputación. | US-01 a US-05, US-13 |
+| **Incident Service** | Ciclo de vida del reporte, categorización, evidencia y auditoría. | US-06 a US-10, US-21 |
+| **Validation Service** | Validación comunitaria, ventana y radio, umbral de publicación. | US-11, US-12 |
+| **Trust Service** | Detección de duplicados y de reportes falsos, moderación y apelación. | US-14 a US-17 |
+| **Geo Analytics Service** | Agregación espacio-temporal, mapa de calor e indicadores institucionales. | US-18 a US-20, US-26 a US-29 |
+| **Routing Service** | Ponderación del grafo de rutas por índice de riesgo. | US-22, US-23 |
+| **Notification Service** | Alertas de proximidad y resúmenes periódicos. | US-24, US-25 |
+| **API Gateway** | Punto de entrada único, autenticación, enrutamiento y límite de tasa. | TS-04 |
+
+> La descomposición presentada es **inicial y sujeta a validación**. Las decisiones arquitectónicas se registrarán como *Architecture Decision Records* en `docs/adr/` y se revisarán en cada entrega conforme se obtenga evidencia de acoplamiento o de carga.
+
+### 1.6.5. Prácticas de seguridad iniciales (DevSecOps)
+
+| Práctica | Implementación inicial | Etapa del flujo |
+| :--- | :--- | :--- |
+| Gestión de secretos | Uso de GitHub Secrets y variables de entorno; prohibición de credenciales en el repositorio. | Code / Build |
+| Escaneo de secretos | *Secret scanning* y *push protection* habilitados en el repositorio. | Code |
+| Análisis de dependencias | Dependabot con alertas y actualizaciones automáticas de dependencias vulnerables. | Build |
+| Análisis estático de seguridad | Reglas de seguridad de SonarCloud como parte del *quality gate*. | Test |
+| Autenticación y autorización | Tokens de acceso con expiración y autorización basada en roles en el API Gateway. | Deploy |
+| Protección de datos personales | Minimización de datos, anonimización del autor en el reporte público, eliminación de metadatos de ubicación en la evidencia adjunta y política de retención documentada, conforme a la Ley N.° 29733. | Transversal |
+| Principio de menor privilegio | Permisos mínimos por servicio y por token del pipeline. | Deploy / Operate |
+
+---
