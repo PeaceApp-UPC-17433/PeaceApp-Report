@@ -124,3 +124,23 @@
 - [Anexos](#anexos)
 
 ---
+
+# Student Outcome
+
+El curso **1ASI0548 - Agile Software Factories** contribuye al desarrollo del siguiente *Student Outcome* de ABET:
+
+> **ABET - EAC - Student Outcome 5:** *La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusión, establecen metas, planifican tareas y cumplen objetivos.*
+
+| Criterio específico | Acciones realizadas | Conclusiones |
+| :--- | :--- | :--- |
+| **5.1.** Reconoce la contribución individual dentro de un equipo. | `[Apellidos, Nombres 1]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 1.]` |
+| | `[Apellidos, Nombres 2]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 2.]` |
+| | `[Apellidos, Nombres 3]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 3.]` |
+| | `[Apellidos, Nombres 4]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 4.]` |
+| | `[Apellidos, Nombres 5]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 5.]` |
+| | `[Apellidos, Nombres 6]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 6.]` |
+| | `[Apellidos, Nombres 7]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 7.]` |
+| | `[Apellidos, Nombres 8]`<br>`[Describir las acciones realizadas por el integrante durante el Primer Avance.]` | `[Conclusión individual del integrante 8.]` |
+| **5.2.** Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos. | El equipo definió la estrategia Agile (Scrum con sprints de dos semanas), distribuyó roles formales, construyó el Product Backlog inicial y acordó la estrategia de Software Factory documentada en la sección 1.6. | La organización formal del equipo y la trazabilidad *Product Backlog → User Stories → Sprint Backlog* permitieron cerrar el Primer Avance con entregables verificables en el repositorio. |
+
+---
