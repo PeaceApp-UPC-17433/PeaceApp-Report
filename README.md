@@ -51,3 +51,14 @@
 </div>
 
 ---
+
+# Registro de Versiones del Informe
+
+| Versión | Fecha | Autor | Descripción de la modificación |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 12/09/2026 | Equipo PeaceApp | Primer Avance (Semana 03): descripción del producto, problema y necesidad, Product Vision, objetivos, alcance inicial, As-Is, To-Be, User Stories iniciales, Product Backlog inicial, estrategia Agile, organización del equipo, estrategia inicial de Software Factory y herramientas seleccionadas. |
+| 1.1 | `[DD/MM/YYYY]` | `[Autor]` | `[Segundo Avance]` |
+| 1.2 | `[DD/MM/YYYY]` | `[Autor]` | `[Trabajo Parcial - TB2]` |
+| 1.3 | `[DD/MM/YYYY]` | `[Autor]` | `[Trabajo Final - TB4]` |
+
+---
