@@ -523,3 +523,61 @@ Las historias siguen el formato *Como \<rol\>, quiero \<funcionalidad\>, para \<
 | **TS-06** | Despliegue automatizado en entorno cloud | Como equipo de desarrollo, quiero desplegar automáticamente el incremento en el entorno de pruebas, para validar cada integración. | **Escenario: despliegue continuo**<br>**Dado** que un merge se integra a `develop` y el pipeline finaliza correctamente,<br>**Cuando** se ejecuta la etapa de despliegue,<br>**Entonces** la nueva versión queda desplegada en el entorno de pruebas y el equipo recibe la notificación con la URL del incremento. |
 | **TS-07** | Observabilidad básica | Como equipo de desarrollo, quiero centralizar métricas y logs de los servicios, para diagnosticar incidencias en operación. | **Escenario: consulta de métricas**<br>**Dado** que los servicios exponen sus métricas,<br>**Cuando** consulto el tablero de observabilidad,<br>**Entonces** visualizo latencia, tasa de error y disponibilidad por servicio en el periodo seleccionado. |
 | **TS-08** | Gestión de secretos y configuración | Como equipo de desarrollo, quiero gestionar credenciales y configuración fuera del código fuente, para evitar la exposición de secretos. | **Escenario: ausencia de secretos en el repositorio**<br>**Dado** que el pipeline ejecuta el escaneo de secretos,<br>**Cuando** detecta una credencial en el código,<br>**Entonces** falla la ejecución e impide la integración del cambio. |
+
+### 1.3.5. Product Backlog inicial
+
+Estimación en *story points* con la serie de Fibonacci (1, 2, 3, 5, 8, 13) mediante *Planning Poker*. Priorización según **MoSCoW** y ordenamiento por valor de negocio frente a esfuerzo.
+
+| # Orden | ID | Epic | Título | Prioridad (MoSCoW) | Story Points | Sprint tentativo |
+| :---: | :---: | :---: | :--- | :---: | :---: | :---: |
+| 1 | TS-01 | EP-09 | Configuración del repositorio y estrategia de ramas | Must | 2 | Sprint 1 |
+| 2 | TS-02 | EP-09 | Pipeline de integración continua | Must | 5 | Sprint 1 |
+| 3 | TS-03 | EP-09 | Contenedorización de los servicios | Must | 5 | Sprint 1 |
+| 4 | US-01 | EP-01 | Registro de usuario | Must | 3 | Sprint 1 |
+| 5 | US-02 | EP-01 | Inicio de sesión | Must | 3 | Sprint 1 |
+| 6 | TS-04 | EP-09 | API Gateway y enrutamiento | Must | 5 | Sprint 1 |
+| 7 | US-06 | EP-02 | Registro rápido de incidente | Must | 8 | Sprint 2 |
+| 8 | US-07 | EP-02 | Categorización del incidente | Must | 2 | Sprint 2 |
+| 9 | US-18 | EP-05 | Mapa de incidentes en tiempo real | Must | 8 | Sprint 2 |
+| 10 | US-08 | EP-02 | Adjuntar evidencia multimedia | Must | 5 | Sprint 2 |
+| 11 | US-11 | EP-03 | Validar o descartar un reporte cercano | Must | 5 | Sprint 2 |
+| 12 | US-12 | EP-03 | Publicación por umbral de validación | Must | 5 | Sprint 2 |
+| 13 | TS-06 | EP-09 | Despliegue automatizado en entorno cloud | Must | 8 | Sprint 2 |
+| 14 | US-21 | EP-05 | Detalle del incidente | Must | 3 | Sprint 3 |
+| 15 | US-19 | EP-05 | Filtros de consulta | Should | 3 | Sprint 3 |
+| 16 | US-13 | EP-03 | Cálculo de reputación | Should | 5 | Sprint 3 |
+| 17 | US-14 | EP-04 | Detección de reportes duplicados | Should | 8 | Sprint 3 |
+| 18 | US-10 | EP-02 | Historial de reportes propios | Should | 3 | Sprint 3 |
+| 19 | TS-05 | EP-09 | Análisis estático de código y calidad | Should | 3 | Sprint 3 |
+| 20 | US-20 | EP-05 | Mapa de calor por franja horaria | Must | 13 | Sprint 4 |
+| 21 | US-15 | EP-04 | Detección de reportes falsos | Should | 13 | Sprint 4 |
+| 22 | US-16 | EP-04 | Moderación de reportes | Should | 5 | Sprint 4 |
+| 23 | US-04 | EP-01 | Reporte anónimo | Should | 3 | Sprint 4 |
+| 24 | US-09 | EP-02 | Edición y eliminación de reporte propio | Should | 3 | Sprint 4 |
+| 25 | TS-08 | EP-09 | Gestión de secretos y configuración | Should | 3 | Sprint 4 |
+| 26 | US-22 | EP-06 | Sugerencia de ruta de menor riesgo | Must | 13 | Sprint 5 |
+| 27 | US-26 | EP-08 | Acceso institucional al panel | Must | 5 | Sprint 5 |
+| 28 | US-27 | EP-08 | Indicadores por zona, horario y tipo | Must | 8 | Sprint 5 |
+| 29 | US-24 | EP-07 | Alerta de proximidad | Should | 5 | Sprint 5 |
+| 30 | TS-07 | EP-09 | Observabilidad básica | Should | 5 | Sprint 5 |
+| 31 | US-03 | EP-01 | Gestión de perfil | Could | 3 | Sprint 6 |
+| 32 | US-05 | EP-01 | Consulta de reputación | Could | 2 | Sprint 6 |
+| 33 | US-28 | EP-08 | Evolución temporal y efecto de la intervención | Could | 5 | Sprint 6 |
+| 34 | US-29 | EP-08 | Exportación de datos | Could | 3 | Sprint 6 |
+| 35 | US-23 | EP-06 | Comparación de rutas por horario | Could | 5 | Sprint 6 |
+| 36 | US-25 | EP-07 | Resumen por zona de interés | Could | 3 | Sprint 6 |
+| 37 | US-17 | EP-04 | Apelación del autor | Won't (este ciclo) | 3 | Backlog |
+
+**Resumen de la estimación.**
+
+| Indicador | Valor |
+| :--- | :---: |
+| Total de ítems del backlog inicial | 37 |
+| Total de story points estimados | 189 |
+| Ítems *Must have* | 18 |
+| Ítems *Should have* | 12 |
+| Ítems *Could have* | 6 |
+| Ítems *Won't have* en este ciclo | 1 |
+| Technical Stories | 8 |
+
+---
