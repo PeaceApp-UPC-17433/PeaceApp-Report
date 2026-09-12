@@ -1,0 +1,35 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDE
+.vscode/
+.idea/
+*.iml
+*.swp
+
+# Dependencias
+node_modules/
+target/
+build/
+dist/
+.gradle/
+
+# Entornos y secretos
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# Logs y temporales
+*.log
+logs/
+tmp/
+*.tmp
+
+# Salidas de documentación
+*.pdf.bak
+~$*.docx
+~$*.pptx
