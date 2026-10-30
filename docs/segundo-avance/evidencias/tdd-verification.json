@@ -1,0 +1,29 @@
+[
+  {
+    "stage": "red",
+    "commit": "89488e9",
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "test": "AuthServiceTest#registerNormalizesEmailToLowercase",
+    "reproduced_on": "2026-10-30"
+  },
+  {
+    "stage": "green",
+    "commit": "be08ae0",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "test": "AuthServiceTest#registerNormalizesEmailToLowercase",
+    "reproduced_on": "2026-10-30"
+  },
+  {
+    "stage": "refactor",
+    "commit": "f6d8f8b",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "test": "AuthServiceTest#registerNormalizesEmailToLowercase",
+    "reproduced_on": "2026-10-30"
+  }
+]
