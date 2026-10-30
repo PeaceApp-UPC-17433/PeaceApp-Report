@@ -1,0 +1,43 @@
+{
+  "verified_on": "2026-10-30",
+  "event": "pull_request",
+  "publish": "skipped by design; no push to develop/main yet",
+  "runs": [
+    {
+      "repo": "identity-service",
+      "run": 41016214395,
+      "artifacts": [
+        {
+          "name": "identity-service-verification",
+          "size": 300287
+        }
+      ],
+      "conclusion": "success",
+      "url": "https://github.com/PeaceApp-UPC-17433/identity-service/actions/runs/41016214395"
+    },
+    {
+      "repo": "incident-service",
+      "run": 41016220755,
+      "artifacts": [
+        {
+          "name": "incident-service-verification",
+          "size": 276610
+        }
+      ],
+      "conclusion": "success",
+      "url": "https://github.com/PeaceApp-UPC-17433/incident-service/actions/runs/41016220755"
+    },
+    {
+      "repo": "trust-service",
+      "run": 41016226625,
+      "artifacts": [
+        {
+          "name": "trust-service-verification",
+          "size": 273460
+        }
+      ],
+      "conclusion": "success",
+      "url": "https://github.com/PeaceApp-UPC-17433/trust-service/actions/runs/41016226625"
+    }
+  ]
+}
