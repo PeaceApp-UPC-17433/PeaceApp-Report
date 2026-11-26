@@ -1,0 +1,28 @@
+{
+  "screen": "reportes",
+  "browser": "firefox",
+  "url": "http://localhost:13000/reports",
+  "passes": 24,
+  "violations": [
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "nodes": 2,
+      "help": "Buttons must have discernible text",
+      "wcag": [
+        "wcag2a",
+        "wcag412"
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 23,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "wcag": [
+        "wcag2aa",
+        "wcag143"
+      ]
+    }
+  ]
+}

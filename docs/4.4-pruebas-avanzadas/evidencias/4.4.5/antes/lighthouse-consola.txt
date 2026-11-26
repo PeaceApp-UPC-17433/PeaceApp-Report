@@ -1,0 +1,8 @@
+login          a11y=96 perf=98 bp=100 seo=83 LCP=1085ms color-contrast
+registro       a11y=96 perf=98 bp=100 seo=83 LCP=1085ms color-contrast
+mapa           a11y=99 perf=96 bp=96 seo=83 LCP=1269ms aria-allowed-role
+reportes       a11y=88 perf=100 bp=96 seo=83 LCP=785ms button-name,color-contrast,heading-order
+nuevo-reporte  a11y=100 perf=96 bp=96 seo=83 LCP=1290ms 
+alertas        a11y=100 perf=100 bp=96 seo=83 LCP=806ms 
+perfil         a11y=96 perf=100 bp=96 seo=83 LCP=766ms color-contrast
+Accesibilidad bajo 90: reportes=88

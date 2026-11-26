@@ -1,0 +1,7 @@
+{
+  "screen": "registro",
+  "browser": "firefox",
+  "url": "http://localhost:13000/register",
+  "passes": 29,
+  "violations": []
+}

@@ -1,0 +1,132 @@
+{
+  "screen": "reportes",
+  "browser": "chromium",
+  "url": "http://localhost:13000/reports",
+  "passes": 24,
+  "violations": [
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "nodes": 2,
+      "help": "Buttons must have discernible text",
+      "wcag": [
+        "wcag2a",
+        "wcag412"
+      ],
+      "targets": [
+        {
+          "target": ".btn-secondary.btn-sm.btn:nth-child(1)",
+          "detail": "Element does not have inner text that is visible to screen readers"
+        },
+        {
+          "target": ".btn-secondary.btn-sm.btn:nth-child(3)",
+          "detail": "Element does not have inner text that is visible to screen readers"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 23,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "wcag": [
+        "wcag2aa",
+        "wcag143"
+      ],
+      "targets": [
+        {
+          "target": ".report-card.card:nth-child(1) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(1) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(2) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(2) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(3) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(3) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(4) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(4) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(5) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 2.26 (foreground color: #ffffff, background color: #e0a100, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(5) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(6) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 2.26 (foreground color: #ffffff, background color: #e0a100, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(7) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(7) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(8) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(8) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(9) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 2.26 (foreground color: #ffffff, background color: #e0a100, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(9) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(10) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(10) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(11) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(11) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(12) > .body > .row > .badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".report-card.card:nth-child(12) > .body > .row > .badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ]
+}

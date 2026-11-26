@@ -1,0 +1,5 @@
+# Mensajes en notifications.email-requested.dlq después del ZAP API scan de identity-service (2026-11-26, antes de la corrección)
+# identity-service aceptó estos correos en PUT /users/me o en el registro y emitió el código de verificación; notification-service los rechazó.
+2026-11-26T13:11:36.277005065Z  to="zaproxy@example.com'"       template=EMAIL_VERIFICATION
+2026-11-26T13:13:14.501473294Z  to='zj{@7533*3107}zj'           template=EMAIL_VERIFICATION
+2026-11-26T13:13:21.617102636Z  to=''                           template=EMAIL_VERIFICATION

@@ -1,0 +1,9 @@
+Prueba de mutación manual sobre EvidenceStorage (incident-service), 2026-11-26.
+Mutación: el SAS de subida incluye permiso de lectura
+  new BlobSasPermission().setCreatePermission(true).setWritePermission(true).setReadPermission(true)
+Resultado de EvidenceStorageAzuriteTest con la mutación:
+  Tests run: 5, Failures: 2, Errors: 0, Skipped: 0
+  - elSasDeSubidaPermiteSubirPeroNoLeerNiBorrar: GET con el SAS de subida esperaba 403 y Azurite respondió 200.
+  - unSasVencidoOAlteradoEsRechazado: la URL ya no contiene sp=cw (ahora sp=rcw).
+Sin la mutación: Tests run: 5, Failures: 0 (5,3 s).
+Conclusión: la prueba detecta que un permiso de más en el SAS expondría las evidencias crudas (sin sanear).

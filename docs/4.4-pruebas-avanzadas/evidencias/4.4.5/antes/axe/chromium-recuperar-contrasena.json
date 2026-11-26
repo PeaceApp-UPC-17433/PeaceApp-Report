@@ -1,0 +1,7 @@
+{
+  "screen": "recuperar-contrasena",
+  "browser": "chromium",
+  "url": "http://localhost:13000/forgot-password",
+  "passes": 24,
+  "violations": []
+}

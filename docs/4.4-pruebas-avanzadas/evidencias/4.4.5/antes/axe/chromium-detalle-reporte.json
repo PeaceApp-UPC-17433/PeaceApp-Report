@@ -1,0 +1,48 @@
+{
+  "screen": "detalle-reporte",
+  "browser": "chromium",
+  "url": "http://localhost:13000/reports/6554e8ec-503f-40c8-8ed2-abefb3c102d9",
+  "passes": 25,
+  "violations": [
+    {
+      "id": "aria-progressbar-name",
+      "impact": "serious",
+      "nodes": 1,
+      "help": "ARIA progressbar nodes must have an accessible name",
+      "wcag": [
+        "wcag2a",
+        "wcag111"
+      ],
+      "targets": [
+        {
+          "target": ".meter",
+          "detail": "aria-label attribute does not exist or is empty"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 3,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "wcag": [
+        "wcag2aa",
+        "wcag143"
+      ],
+      "targets": [
+        {
+          "target": ".small[href$=\"reports\"]",
+          "detail": "Element has insufficient color contrast of 4.41 (foreground color: #1f79aa, background color: #f2f6f9, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".badge:nth-child(2)",
+          "detail": "Element has insufficient color contrast of 3.08 (foreground color: #ffffff, background color: #e8710a, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".badge:nth-child(3)",
+          "detail": "Element has insufficient color contrast of 4.38 (foreground color: #ffffff, background color: #6b7a8c, font size: 9.4pt (12.48px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ]
+}

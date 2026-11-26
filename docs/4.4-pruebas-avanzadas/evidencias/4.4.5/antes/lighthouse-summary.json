@@ -1,0 +1,103 @@
+{
+  "web": "http://localhost:13000",
+  "lighthouse": "12.8.2",
+  "minAccessibility": 90,
+  "screens": [
+    {
+      "screen": "login",
+      "finalUrl": "http://localhost:13000/login",
+      "accessibility": 96,
+      "performance": 98,
+      "bestPractices": 100,
+      "seo": 83,
+      "lcpMs": 1085,
+      "cls": 0,
+      "tbtMs": 0,
+      "failedA11yAudits": [
+        "color-contrast"
+      ]
+    },
+    {
+      "screen": "registro",
+      "finalUrl": "http://localhost:13000/register",
+      "accessibility": 96,
+      "performance": 98,
+      "bestPractices": 100,
+      "seo": 83,
+      "lcpMs": 1085,
+      "cls": 0,
+      "tbtMs": 0,
+      "failedA11yAudits": [
+        "color-contrast"
+      ]
+    },
+    {
+      "screen": "mapa",
+      "finalUrl": "http://localhost:13000/map",
+      "accessibility": 99,
+      "performance": 96,
+      "bestPractices": 96,
+      "seo": 83,
+      "lcpMs": 1269,
+      "cls": 0.007,
+      "tbtMs": 28,
+      "failedA11yAudits": [
+        "aria-allowed-role"
+      ]
+    },
+    {
+      "screen": "reportes",
+      "finalUrl": "http://localhost:13000/reports",
+      "accessibility": 88,
+      "performance": 100,
+      "bestPractices": 96,
+      "seo": 83,
+      "lcpMs": 785,
+      "cls": 0.005,
+      "tbtMs": 0,
+      "failedA11yAudits": [
+        "button-name",
+        "color-contrast",
+        "heading-order"
+      ]
+    },
+    {
+      "screen": "nuevo-reporte",
+      "finalUrl": "http://localhost:13000/reports/new",
+      "accessibility": 100,
+      "performance": 96,
+      "bestPractices": 96,
+      "seo": 83,
+      "lcpMs": 1290,
+      "cls": 0.005,
+      "tbtMs": 6,
+      "failedA11yAudits": []
+    },
+    {
+      "screen": "alertas",
+      "finalUrl": "http://localhost:13000/alerts",
+      "accessibility": 100,
+      "performance": 100,
+      "bestPractices": 96,
+      "seo": 83,
+      "lcpMs": 806,
+      "cls": 0.006,
+      "tbtMs": 0,
+      "failedA11yAudits": []
+    },
+    {
+      "screen": "perfil",
+      "finalUrl": "http://localhost:13000/profile",
+      "accessibility": 96,
+      "performance": 100,
+      "bestPractices": 96,
+      "seo": 83,
+      "lcpMs": 766,
+      "cls": 0.005,
+      "tbtMs": 0,
+      "failedA11yAudits": [
+        "color-contrast"
+      ]
+    }
+  ]
+}

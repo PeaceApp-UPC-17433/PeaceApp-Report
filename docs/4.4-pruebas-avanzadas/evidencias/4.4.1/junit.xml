@@ -1,0 +1,198 @@
+<testsuites id="" name="" tests="70" failures="0" skipped="3" errors="0" time="117.00976700000001">
+<testsuite name="a11y\screens.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="chromium" tests="14" failures="0" skipped="0" time="53.696" errors="0">
+<testcase name="Pantallas públicas › login" classname="a11y\screens.spec.js" time="3.724">
+</testcase>
+<testcase name="Pantallas públicas › registro" classname="a11y\screens.spec.js" time="4.205">
+</testcase>
+<testcase name="Pantallas públicas › recuperar-contrasena" classname="a11y\screens.spec.js" time="3.657">
+</testcase>
+<testcase name="Pantallas con sesión › mapa" classname="a11y\screens.spec.js" time="6.166">
+</testcase>
+<testcase name="Pantallas con sesión › reportes" classname="a11y\screens.spec.js" time="4.351">
+</testcase>
+<testcase name="Pantallas con sesión › nuevo-reporte" classname="a11y\screens.spec.js" time="4.607">
+</testcase>
+<testcase name="Pantallas con sesión › alertas" classname="a11y\screens.spec.js" time="3.189">
+</testcase>
+<testcase name="Pantallas con sesión › contactos" classname="a11y\screens.spec.js" time="4.013">
+</testcase>
+<testcase name="Pantallas con sesión › perfil" classname="a11y\screens.spec.js" time="3.043">
+</testcase>
+<testcase name="Pantallas con sesión › detalle-reporte" classname="a11y\screens.spec.js" time="4.024">
+</testcase>
+<testcase name="Revisión dirigida › los íconos decorativos no ensucian el nombre accesible de la navegación" classname="a11y\screens.spec.js" time="2.911">
+</testcase>
+<testcase name="Revisión dirigida › los filtros de alternancia exponen su estado (aria-pressed)" classname="a11y\screens.spec.js" time="2.816">
+</testcase>
+<testcase name="Revisión dirigida › el voto propio se anuncia como botón presionado" classname="a11y\screens.spec.js" time="4.537">
+</testcase>
+<testcase name="Revisión dirigida › la evidencia se puede adjuntar solo con teclado" classname="a11y\screens.spec.js" time="2.453">
+</testcase>
+</testsuite>
+<testsuite name="agnostic\auth.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="chromium" tests="4" failures="0" skipped="0" time="14.797" errors="0">
+<testcase name="Acceso › una ruta protegida redirige al login y conserva el destino" classname="agnostic\auth.spec.js" time="1.129">
+</testcase>
+<testcase name="Acceso › registro desde la UI con verificación del correo" classname="agnostic\auth.spec.js" time="4.588">
+</testcase>
+<testcase name="Acceso › credenciales incorrectas muestran un error accesible y no inician sesión" classname="agnostic\auth.spec.js" time="4.645">
+</testcase>
+<testcase name="Acceso › inicia sesión, vuelve al destino pedido y cierra sesión" classname="agnostic\auth.spec.js" time="4.435">
+</testcase>
+</testsuite>
+<testsuite name="agnostic\community.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="chromium" tests="2" failures="0" skipped="0" time="8.379" errors="0">
+<testcase name="Comunidad › un vecino comenta y vota el reporte de otra persona" classname="agnostic\community.spec.js" time="4.333">
+</testcase>
+<testcase name="Comunidad › el autor no ve la opción de votar ni denunciar su propio reporte" classname="agnostic\community.spec.js" time="4.046">
+</testcase>
+</testsuite>
+<testsuite name="agnostic\csp.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="chromium" tests="2" failures="0" skipped="0" time="11.825" errors="0">
+<testcase name="Content-Security-Policy › la web envía la CSP y las cabeceras de seguridad" classname="agnostic\csp.spec.js" time="0.557">
+</testcase>
+<testcase name="Content-Security-Policy › ninguna pantalla viola la política" classname="agnostic\csp.spec.js" time="11.268">
+</testcase>
+</testsuite>
+<testsuite name="agnostic\reports.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="chromium" tests="3" failures="0" skipped="0" time="12.83" errors="0">
+<testcase name="Reportes › publica un reporte desde el formulario con la dirección geocodificada" classname="agnostic\reports.spec.js" time="4.516">
+</testcase>
+<testcase name="Reportes › el listado filtra por tipo y abre el detalle" classname="agnostic\reports.spec.js" time="4.312">
+</testcase>
+<testcase name="Reportes › el mapa carga los reportes de la zona" classname="agnostic\reports.spec.js" time="4.002">
+</testcase>
+</testsuite>
+<testsuite name="specific\chromium-slow-network.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="chromium" tests="1" failures="0" skipped="0" time="34.863" errors="0">
+<testcase name="Chromium con red Slow 3G y CPU 4x › el login carga en menos de 15 s y muestra el estado de espera" classname="specific\chromium-slow-network.spec.js" time="34.863">
+<properties>
+<property name="metric" value="login_visible_ms=5970">
+</property>
+<property name="metric" value="login_to_map_ms=30983">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="specific\firefox-webgl.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="chromium" tests="2" failures="0" skipped="2" time="1.063" errors="0">
+<testcase name="Firefox sin WebGL › el mapa explica que no puede mostrarse en vez de decir &quot;0 reportes&quot;" classname="specific\firefox-webgl.spec.js" time="0.584">
+<properties>
+<property name="skip" value="firefoxUserPrefs solo existe en Firefox">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Firefox sin WebGL › se puede publicar un reporte con la ubicación del navegador" classname="specific\firefox-webgl.spec.js" time="0.479">
+<properties>
+<property name="skip" value="firefoxUserPrefs solo existe en Firefox">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="third-party\integrations.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="chromium" tests="7" failures="0" skipped="0" time="21.897" errors="0">
+<testcase name="Mapbox › el mapa pide el estilo y la geocodificación con el token público de runtime" classname="third-party\integrations.spec.js" time="3.838">
+</testcase>
+<testcase name="Mapbox › token rechazado (401) › sin Mapbox la dirección cae a coordenadas y se puede publicar igual" classname="third-party\integrations.spec.js" time="4.521">
+</testcase>
+<testcase name="Azure Blob Storage (evidencias) › la imagen se sube directo a Blob con el SAS y se previsualiza" classname="third-party\integrations.spec.js" time="3.029">
+</testcase>
+<testcase name="Azure Blob Storage (evidencias) › subida con SAS rechazado (403) › avisa el fallo y deja el formulario usable" classname="third-party\integrations.spec.js" time="2.849">
+</testcase>
+<testcase name="Azure Blob Storage (evidencias) › subida con timeout de red › avisa el fallo y deja el formulario usable" classname="third-party\integrations.spec.js" time="2.876">
+</testcase>
+<testcase name="Cloudinary (foto de perfil) › envía el archivo con el upload preset sin firmar y guarda la URL segura" classname="third-party\integrations.spec.js" time="2.755">
+</testcase>
+<testcase name="Cloudinary (foto de perfil) › Cloudinary caído (500) › avisa el fallo y no cambia la foto" classname="third-party\integrations.spec.js" time="2.029">
+</testcase>
+</testsuite>
+<testsuite name="a11y\screens.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="firefox" tests="14" failures="0" skipped="0" time="102.188" errors="0">
+<testcase name="Pantallas públicas › login" classname="a11y\screens.spec.js" time="6.697">
+</testcase>
+<testcase name="Pantallas públicas › registro" classname="a11y\screens.spec.js" time="7.733">
+</testcase>
+<testcase name="Pantallas públicas › recuperar-contrasena" classname="a11y\screens.spec.js" time="8.725">
+</testcase>
+<testcase name="Pantallas con sesión › mapa" classname="a11y\screens.spec.js" time="10.529">
+</testcase>
+<testcase name="Pantallas con sesión › reportes" classname="a11y\screens.spec.js" time="10.032">
+</testcase>
+<testcase name="Pantallas con sesión › nuevo-reporte" classname="a11y\screens.spec.js" time="9.305">
+</testcase>
+<testcase name="Pantallas con sesión › alertas" classname="a11y\screens.spec.js" time="5.461">
+</testcase>
+<testcase name="Pantallas con sesión › contactos" classname="a11y\screens.spec.js" time="9.137">
+</testcase>
+<testcase name="Pantallas con sesión › perfil" classname="a11y\screens.spec.js" time="6.423">
+</testcase>
+<testcase name="Pantallas con sesión › detalle-reporte" classname="a11y\screens.spec.js" time="7.869">
+</testcase>
+<testcase name="Revisión dirigida › los íconos decorativos no ensucian el nombre accesible de la navegación" classname="a11y\screens.spec.js" time="4.05">
+</testcase>
+<testcase name="Revisión dirigida › los filtros de alternancia exponen su estado (aria-pressed)" classname="a11y\screens.spec.js" time="4.126">
+</testcase>
+<testcase name="Revisión dirigida › el voto propio se anuncia como botón presionado" classname="a11y\screens.spec.js" time="5.585">
+</testcase>
+<testcase name="Revisión dirigida › la evidencia se puede adjuntar solo con teclado" classname="a11y\screens.spec.js" time="6.516">
+</testcase>
+</testsuite>
+<testsuite name="agnostic\auth.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="firefox" tests="4" failures="0" skipped="0" time="21.789" errors="0">
+<testcase name="Acceso › una ruta protegida redirige al login y conserva el destino" classname="agnostic\auth.spec.js" time="2.227">
+</testcase>
+<testcase name="Acceso › registro desde la UI con verificación del correo" classname="agnostic\auth.spec.js" time="8.408">
+</testcase>
+<testcase name="Acceso › credenciales incorrectas muestran un error accesible y no inician sesión" classname="agnostic\auth.spec.js" time="4.169">
+</testcase>
+<testcase name="Acceso › inicia sesión, vuelve al destino pedido y cierra sesión" classname="agnostic\auth.spec.js" time="6.985">
+</testcase>
+</testsuite>
+<testsuite name="agnostic\community.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="firefox" tests="2" failures="0" skipped="0" time="12.391" errors="0">
+<testcase name="Comunidad › un vecino comenta y vota el reporte de otra persona" classname="agnostic\community.spec.js" time="7.205">
+</testcase>
+<testcase name="Comunidad › el autor no ve la opción de votar ni denunciar su propio reporte" classname="agnostic\community.spec.js" time="5.186">
+</testcase>
+</testsuite>
+<testsuite name="agnostic\csp.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="firefox" tests="2" failures="0" skipped="0" time="21.359" errors="0">
+<testcase name="Content-Security-Policy › la web envía la CSP y las cabeceras de seguridad" classname="agnostic\csp.spec.js" time="1.256">
+</testcase>
+<testcase name="Content-Security-Policy › ninguna pantalla viola la política" classname="agnostic\csp.spec.js" time="20.103">
+</testcase>
+</testsuite>
+<testsuite name="agnostic\reports.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="firefox" tests="3" failures="0" skipped="0" time="17.641" errors="0">
+<testcase name="Reportes › publica un reporte desde el formulario con la dirección geocodificada" classname="agnostic\reports.spec.js" time="6.518">
+</testcase>
+<testcase name="Reportes › el listado filtra por tipo y abre el detalle" classname="agnostic\reports.spec.js" time="5.53">
+</testcase>
+<testcase name="Reportes › el mapa carga los reportes de la zona" classname="agnostic\reports.spec.js" time="5.593">
+</testcase>
+</testsuite>
+<testsuite name="specific\chromium-slow-network.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="firefox" tests="1" failures="0" skipped="1" time="1.105" errors="0">
+<testcase name="Chromium con red Slow 3G y CPU 4x › el login carga en menos de 15 s y muestra el estado de espera" classname="specific\chromium-slow-network.spec.js" time="1.105">
+<properties>
+<property name="skip" value="CDP solo está disponible en Chromium">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="specific\firefox-webgl.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="firefox" tests="2" failures="0" skipped="0" time="11.229" errors="0">
+<testcase name="Firefox sin WebGL › el mapa explica que no puede mostrarse en vez de decir &quot;0 reportes&quot;" classname="specific\firefox-webgl.spec.js" time="5.103">
+</testcase>
+<testcase name="Firefox sin WebGL › se puede publicar un reporte con la ubicación del navegador" classname="specific\firefox-webgl.spec.js" time="6.126">
+</testcase>
+</testsuite>
+<testsuite name="third-party\integrations.spec.js" timestamp="2026-11-26T12:16:34.884Z" hostname="firefox" tests="7" failures="0" skipped="0" time="36.894" errors="0">
+<testcase name="Mapbox › el mapa pide el estilo y la geocodificación con el token público de runtime" classname="third-party\integrations.spec.js" time="4.944">
+</testcase>
+<testcase name="Mapbox › token rechazado (401) › sin Mapbox la dirección cae a coordenadas y se puede publicar igual" classname="third-party\integrations.spec.js" time="6.909">
+</testcase>
+<testcase name="Azure Blob Storage (evidencias) › la imagen se sube directo a Blob con el SAS y se previsualiza" classname="third-party\integrations.spec.js" time="5.921">
+</testcase>
+<testcase name="Azure Blob Storage (evidencias) › subida con SAS rechazado (403) › avisa el fallo y deja el formulario usable" classname="third-party\integrations.spec.js" time="4.845">
+</testcase>
+<testcase name="Azure Blob Storage (evidencias) › subida con timeout de red › avisa el fallo y deja el formulario usable" classname="third-party\integrations.spec.js" time="5.525">
+</testcase>
+<testcase name="Cloudinary (foto de perfil) › envía el archivo con el upload preset sin firmar y guarda la URL segura" classname="third-party\integrations.spec.js" time="4.366">
+</testcase>
+<testcase name="Cloudinary (foto de perfil) › Cloudinary caído (500) › avisa el fallo y no cambia la foto" classname="third-party\integrations.spec.js" time="4.384">
+</testcase>
+</testsuite>
+</testsuites>

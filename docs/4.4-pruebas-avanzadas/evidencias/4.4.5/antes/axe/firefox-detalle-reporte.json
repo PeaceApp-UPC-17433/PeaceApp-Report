@@ -1,0 +1,28 @@
+{
+  "screen": "detalle-reporte",
+  "browser": "firefox",
+  "url": "http://localhost:13000/reports/4f6b4137-a699-42e7-97c8-471eb03c6c75",
+  "passes": 25,
+  "violations": [
+    {
+      "id": "aria-progressbar-name",
+      "impact": "serious",
+      "nodes": 1,
+      "help": "ARIA progressbar nodes must have an accessible name",
+      "wcag": [
+        "wcag2a",
+        "wcag111"
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 3,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "wcag": [
+        "wcag2aa",
+        "wcag143"
+      ]
+    }
+  ]
+}

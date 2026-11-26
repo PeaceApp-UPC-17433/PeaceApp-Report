@@ -1,0 +1,7 @@
+{
+  "screen": "reportes",
+  "browser": "firefox",
+  "url": "http://localhost:13000/reports",
+  "passes": 25,
+  "violations": []
+}

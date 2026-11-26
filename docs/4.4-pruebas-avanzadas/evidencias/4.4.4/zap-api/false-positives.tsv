@@ -1,0 +1,4 @@
+# Falsos positivos de ZAP revisados a mano (4.4.4). Los aplica hooks.py como alert filter: la alerta pasa a
+# Informational solo para esa regla, esa URL (regex) y ese parámetro. La regla sigue en FAIL para todo lo demás.
+# Formato: <id regla>	<regex de URL>	<parámetro>	<justificación>
+6	^http://api-gateway:8080/api/v1/users/me$	phoneNumber	Path Traversal de confianza baja: ZAP envió el último segmento de la URL ("me") como teléfono y la respuesta fue igual a la original. phoneNumber solo se guarda en una columna varchar(20) y nunca se usa para leer archivos (AccountService.updateProfile).

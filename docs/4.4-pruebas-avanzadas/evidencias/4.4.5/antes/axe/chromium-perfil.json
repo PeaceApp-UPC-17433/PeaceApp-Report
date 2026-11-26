@@ -1,0 +1,24 @@
+{
+  "screen": "perfil",
+  "browser": "chromium",
+  "url": "http://localhost:13000/profile",
+  "passes": 28,
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 1,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "wcag": [
+        "wcag2aa",
+        "wcag143"
+      ],
+      "targets": [
+        {
+          "target": ".level",
+          "detail": "Element has insufficient color contrast of 1.57 (foreground color: #c3d0da, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ]
+}

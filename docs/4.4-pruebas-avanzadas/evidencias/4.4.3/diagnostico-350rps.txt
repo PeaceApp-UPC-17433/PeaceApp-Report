@@ -1,0 +1,31 @@
+# Diagnóstico del punto de quiebre (2026-11-26): ráfaga de 40 s a 350 req/s con ~10 mil reportes en la zona
+== load (escenario carga, 40 s)
+peticiones: 13100  throughput: 327.5 req/s
+latencia ms  p50=232.5  p90=447.0  p95=579.9  p99=839.8  max=1673.6
+errores: 0.00 %   checks OK: 100.00 %
+VUs max: 100   iteraciones descartadas: 900
+
+  GET /incidents/{id}        p95=570.0 ms  p99=775.3 ms
+  GET /incidents/map         p95=644.8 ms  p99=919.2 ms
+  GET /alerts/unread-count   p95=19.9 ms  p99=37.9 ms
+  GET /incidents/heatmap     p95=591.1 ms  p99=902.0 ms
+  POST /incidents            p95=573.1 ms  p99=805.4 ms
+  GET /incidents             p95=586.1 ms  p99=842.8 ms
+time="2026-11-26T12:08:05Z" level=error msg="thresholds on metrics 'dropped_iterations, http_req_duration{scenario:carga}' have been crossed"
+
+## Consultas activas en PostgreSQL (5 muestras, agrupadas)
+26 x select de incidents por zona (GET /incidents/map)
+ 9 x select count(id) from incidents where status<>? and latitude between ? and ? and longitude between ? and ?
+ 4 x select latitude,longitude from incidents where latitude between ... (GET /incidents/heatmap)
+ 1 x select count(id) from incidents where 1=1 (total del listado paginado)
+
+## EXPLAIN ANALYZE del conteo por zona
+                                                                                                               QUERY PLAN                                                                                                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=586.72..586.73 rows=1 width=8) (actual time=3.851..3.852 rows=1 loops=1)
+   ->  Seq Scan on incidents i1_0  (cost=0.00..558.05 rows=11467 width=16) (actual time=0.006..3.210 rows=11269 loops=1)
+         Filter: (((status)::text <> 'DESCARTADO'::text) AND (latitude >= '-12.1'::double precision) AND (latitude <= '-12'::double precision) AND (longitude >= '-77.1'::double precision) AND (longitude <= '-77'::double precision))
+ Planning Time: 0.861 ms
+ Execution Time: 3.882 ms
+(5 rows)
+

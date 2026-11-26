@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: pe.upc.peaceapp.notifications.ResendProviderIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 133.4 s <<< FAILURE! -- in pe.upc.peaceapp.notifications.ResendProviderIntegrationTest
+pe.upc.peaceapp.notifications.ResendProviderIntegrationTest.aDroppedConnectionIsRetried -- Time elapsed: 21.19 s <<< ERROR!
+org.awaitility.core.ConditionTimeoutException: Condition with Lambda expression in pe.upc.peaceapp.notifications.ResendProviderIntegrationTest was not fulfilled within 20 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:167)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1006)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:975)
+	at pe.upc.peaceapp.notifications.ResendProviderIntegrationTest.aDroppedConnectionIsRetried(ResendProviderIntegrationTest.java:191)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+pe.upc.peaceapp.notifications.ResendProviderIntegrationTest.aProviderSlowerThanTheReadTimeoutIsRetried -- Time elapsed: 20.42 s <<< ERROR!
+org.awaitility.core.ConditionTimeoutException: Condition with Lambda expression in pe.upc.peaceapp.notifications.ResendProviderIntegrationTest was not fulfilled within 20 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:167)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1006)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:975)
+	at pe.upc.peaceapp.notifications.ResendProviderIntegrationTest.aProviderSlowerThanTheReadTimeoutIsRetried(ResendProviderIntegrationTest.java:176)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

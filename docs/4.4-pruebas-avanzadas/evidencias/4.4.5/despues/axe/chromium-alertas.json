@@ -1,0 +1,7 @@
+{
+  "screen": "alertas",
+  "browser": "chromium",
+  "url": "http://localhost:13000/alerts",
+  "passes": 24,
+  "violations": []
+}

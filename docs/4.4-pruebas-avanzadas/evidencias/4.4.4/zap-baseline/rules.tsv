@@ -1,0 +1,43 @@
+# Política de OWASP ZAP para PeaceApp (4.4.4). Formato: <id regla>	<IGNORE|INFO|WARN|FAIL>	(<nombre>)
+# Las reglas que no aparecen quedan en WARN: se reportan sin romper el job.
+# FAIL = rompe el workflow. Se usa para (a) cabeceras ya corregidas, para que no vuelvan atrás, y
+# (b) las reglas activas de riesgo alto (inyección, ejecución remota y exposición de configuración).
+# Toda regla en IGNORE o INFO lleva su justificación.
+
+# --- Cabeceras de la web (corregidas; no deben volver atrás)
+10020	FAIL	(Missing Anti-clickjacking Header)
+10021	FAIL	(X-Content-Type-Options Header Missing)
+10038	FAIL	(Content Security Policy (CSP) Header Not Set)
+10037	FAIL	(Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s))
+
+# --- Activas de riesgo alto
+6	FAIL	(Path Traversal)
+7	FAIL	(Remote File Inclusion)
+40003	FAIL	(CRLF Injection)
+40012	FAIL	(Cross Site Scripting (Reflected))
+40014	FAIL	(Cross Site Scripting (Persistent))
+40018	FAIL	(SQL Injection)
+40019	FAIL	(SQL Injection - MySQL)
+40020	FAIL	(SQL Injection - Hypersonic SQL)
+40021	FAIL	(SQL Injection - Oracle)
+40022	FAIL	(SQL Injection - PostgreSQL)
+40024	FAIL	(SQL Injection - SQLite)
+40027	FAIL	(SQL Injection - MsSQL)
+40034	FAIL	(.env Information Leak)
+40042	FAIL	(Spring Actuator Information Leak)
+40043	FAIL	(Log4Shell)
+40045	FAIL	(Spring4Shell)
+40046	FAIL	(Server Side Request Forgery)
+90019	FAIL	(Server Side Code Injection)
+90020	FAIL	(Remote OS Command Injection)
+90021	FAIL	(XPath Injection)
+90023	FAIL	(XML External Entity Attack)
+90025	FAIL	(Expression Language Injection)
+90035	FAIL	(Server Side Template Injection)
+
+# --- Informativas o no aplicables
+10109	INFO	(Modern Web Application: solo indica que la web es una SPA)
+10111	INFO	(Authentication Request Identified: identifica el login; no es una vulnerabilidad)
+10112	INFO	(Session Management Response Identified: identifica el JWT de sesión; no es una vulnerabilidad)
+# HSTS no aplica en el stack local (HTTP). En producción lo envía el ingress (ver evidencias/4.4.4/prod-headers-antes.txt).
+10035	INFO	(Strict-Transport-Security Header Not Set)

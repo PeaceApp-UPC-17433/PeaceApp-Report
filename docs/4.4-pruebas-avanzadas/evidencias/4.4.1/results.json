@@ -1,0 +1,2883 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\paypr\\OneDrive\\Documentos\\UPC\\ciclo 10\\factories\\gh\\peaceapp-platform\\tests\\e2e\\playwright.config.js",
+    "rootDir": "C:/Users/paypr/OneDrive/Documentos/UPC/ciclo 10/factories/gh/peaceapp-platform/tests/e2e/specs",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "C:\\Users\\paypr\\OneDrive\\Documentos\\UPC\\ciclo 10\\factories\\gh\\peaceapp-platform\\tests\\e2e\\support\\global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/junit.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/paypr/OneDrive/Documentos/UPC/ciclo 10/factories/gh/peaceapp-platform/tests/e2e/reports/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/paypr/OneDrive/Documentos/UPC/ciclo 10/factories/gh/peaceapp-platform/tests/e2e/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/paypr/OneDrive/Documentos/UPC/ciclo 10/factories/gh/peaceapp-platform/tests/e2e/reports/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/paypr/OneDrive/Documentos/UPC/ciclo 10/factories/gh/peaceapp-platform/tests/e2e/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "a11y\\screens.spec.js",
+      "file": "a11y/screens.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Pantallas públicas",
+          "file": "a11y/screens.spec.js",
+          "line": 30,
+          "column": 6,
+          "specs": [
+            {
+              "title": "login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3724,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:37.416Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-login",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-a81a1ec430ccfb3cea97",
+              "file": "a11y/screens.spec.js",
+              "line": 36,
+              "column": 9
+            },
+            {
+              "title": "registro",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4205,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:37.404Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-registro",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-71bed571fb796b95c74f",
+              "file": "a11y/screens.spec.js",
+              "line": 36,
+              "column": 9
+            },
+            {
+              "title": "recuperar-contrasena",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 3657,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:37.407Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-recuperar-contrasena",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-597a1c374d671bb8ec01",
+              "file": "a11y/screens.spec.js",
+              "line": 36,
+              "column": 9
+            },
+            {
+              "title": "login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6697,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:14.724Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-login",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-2251a23e8fcb22fce5be",
+              "file": "a11y/screens.spec.js",
+              "line": 36,
+              "column": 9
+            },
+            {
+              "title": "registro",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 7733,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:17.772Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-registro",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-a67b3467762eda0c57bc",
+              "file": "a11y/screens.spec.js",
+              "line": 36,
+              "column": 9
+            },
+            {
+              "title": "recuperar-contrasena",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 8725,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:21.981Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-recuperar-contrasena",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-712f623f4d26993b1caa",
+              "file": "a11y/screens.spec.js",
+              "line": 36,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "Pantallas con sesión",
+          "file": "a11y/screens.spec.js",
+          "line": 44,
+          "column": 6,
+          "specs": [
+            {
+              "title": "mapa",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 6166,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:37.454Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-mapa",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-9596f46910d30e24a83a",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "reportes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 4351,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:41.342Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-reportes",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-d4298f026c33fdb0b663",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "nuevo-reporte",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4607,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:41.423Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-nuevo-reporte",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-dd28d6403021deee5bfe",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "alertas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3189,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:41.895Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-alertas",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-cd7f7c2e9e1a6afa0b0b",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "contactos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4013,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:44.007Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-contactos",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-e5bf29be1e1c42eef9bb",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "perfil",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3043,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:45.115Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-perfil",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-2b081f150a0a96280dcd",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "detalle-reporte",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 4024,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:45.740Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-detalle-reporte",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-4161291c7e1787d0f4ce",
+              "file": "a11y/screens.spec.js",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "mapa",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10529,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:23.755Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-mapa",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-086370424d82e37ce464",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "reportes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 10032,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:27.104Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-reportes",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-4a7a295eed315b625606",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "nuevo-reporte",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 9305,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:32.683Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-nuevo-reporte",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-96a1067d8781a64f4ee2",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "alertas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5461,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:34.324Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-alertas",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-998a49e1f2a7c8d41c53",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "contactos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 9137,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:42.150Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-contactos",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-f99a96fd850b9d95d2d5",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "perfil",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 6423,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:37.180Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-perfil",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-3514cb70e58a742f0b04",
+              "file": "a11y/screens.spec.js",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "detalle-reporte",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7869,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:39.822Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "axe-detalle-reporte",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-5fb38ea36e3595d868f0",
+              "file": "a11y/screens.spec.js",
+              "line": 60,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Revisión dirigida",
+          "file": "a11y/screens.spec.js",
+          "line": 69,
+          "column": 6,
+          "specs": [
+            {
+              "title": "los íconos decorativos no ensucian el nombre accesible de la navegación",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2911,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:46.065Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-3f4d33d5c629ad4948c3",
+              "file": "a11y/screens.spec.js",
+              "line": 70,
+              "column": 5
+            },
+            {
+              "title": "los filtros de alternancia exponen su estado (aria-pressed)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2816,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:48.069Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-955a5e52b24c750cb189",
+              "file": "a11y/screens.spec.js",
+              "line": 77,
+              "column": 5
+            },
+            {
+              "title": "el voto propio se anuncia como botón presionado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4537,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:48.200Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-f0dcf3ed59ca3ceeabce",
+              "file": "a11y/screens.spec.js",
+              "line": 84,
+              "column": 5
+            },
+            {
+              "title": "la evidencia se puede adjuntar solo con teclado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2453,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:49.017Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-8c154cd1cb2e1212b322",
+              "file": "a11y/screens.spec.js",
+              "line": 97,
+              "column": 5
+            },
+            {
+              "title": "los íconos decorativos no ensucian el nombre accesible de la navegación",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4050,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:42.062Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-8cab1a7412bc151cbac1",
+              "file": "a11y/screens.spec.js",
+              "line": 70,
+              "column": 5
+            },
+            {
+              "title": "los filtros de alternancia exponen su estado (aria-pressed)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4126,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:43.647Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-f6fc3efbfe4d61d6c094",
+              "file": "a11y/screens.spec.js",
+              "line": 77,
+              "column": 5
+            },
+            {
+              "title": "el voto propio se anuncia como botón presionado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5585,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:46.165Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-9670156bde0fdd633144",
+              "file": "a11y/screens.spec.js",
+              "line": 84,
+              "column": 5
+            },
+            {
+              "title": "la evidencia se puede adjuntar solo con teclado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6516,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:47.730Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "665e923676b9295c170f-cddbcb298cd24c49c115",
+              "file": "a11y/screens.spec.js",
+              "line": 97,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "agnostic\\auth.spec.js",
+      "file": "agnostic/auth.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Acceso",
+          "file": "agnostic/auth.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "una ruta protegida redirige al login y conserva el destino",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1129,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:49.853Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7ce1ebc61ac632ffc7-9e6fd76dd4ac0cc9612b",
+              "file": "agnostic/auth.spec.js",
+              "line": 7,
+              "column": 5
+            },
+            {
+              "title": "registro desde la UI con verificación del correo",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4588,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:50.962Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7ce1ebc61ac632ffc7-3a33daa311e3535dee1e",
+              "file": "agnostic/auth.spec.js",
+              "line": 13,
+              "column": 5
+            },
+            {
+              "title": "credenciales incorrectas muestran un error accesible y no inician sesión",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 4645,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:51.034Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7ce1ebc61ac632ffc7-1935349114ba64897988",
+              "file": "agnostic/auth.spec.js",
+              "line": 39,
+              "column": 5
+            },
+            {
+              "title": "inicia sesión, vuelve al destino pedido y cierra sesión",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4435,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:51.607Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7ce1ebc61ac632ffc7-87a6b9fc27506531b205",
+              "file": "agnostic/auth.spec.js",
+              "line": 48,
+              "column": 5
+            },
+            {
+              "title": "una ruta protegida redirige al login y conserva el destino",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2227,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:47.839Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7ce1ebc61ac632ffc7-45f59884a63756f237a2",
+              "file": "agnostic/auth.spec.js",
+              "line": 7,
+              "column": 5
+            },
+            {
+              "title": "registro desde la UI con verificación del correo",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 8408,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:50.107Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7ce1ebc61ac632ffc7-58baa0a6b6a214a5a831",
+              "file": "agnostic/auth.spec.js",
+              "line": 13,
+              "column": 5
+            },
+            {
+              "title": "credenciales incorrectas muestran un error accesible y no inician sesión",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4169,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:51.820Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7ce1ebc61ac632ffc7-0291253eeb5289ad2981",
+              "file": "agnostic/auth.spec.js",
+              "line": 39,
+              "column": 5
+            },
+            {
+              "title": "inicia sesión, vuelve al destino pedido y cierra sesión",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6985,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:53.727Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7ce1ebc61ac632ffc7-63abb6787ad85a402ad3",
+              "file": "agnostic/auth.spec.js",
+              "line": 48,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "agnostic\\community.spec.js",
+      "file": "agnostic/community.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Comunidad",
+          "file": "agnostic/community.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "un vecino comenta y vota el reporte de otra persona",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4333,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:52.795Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7c1f3bb6638e2a2aaeea-9b1b3c75ce0d18aa0d6d",
+              "file": "agnostic/community.spec.js",
+              "line": 4,
+              "column": 5
+            },
+            {
+              "title": "el autor no ve la opción de votar ni denunciar su propio reporte",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4046,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:55.634Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7c1f3bb6638e2a2aaeea-f5f6128a6a58a328aef7",
+              "file": "agnostic/community.spec.js",
+              "line": 23,
+              "column": 5
+            },
+            {
+              "title": "un vecino comenta y vota el reporte de otra persona",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7205,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:54.331Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7c1f3bb6638e2a2aaeea-da2d7b9812d20c03cd18",
+              "file": "agnostic/community.spec.js",
+              "line": 4,
+              "column": 5
+            },
+            {
+              "title": "el autor no ve la opción de votar ni denunciar su propio reporte",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5186,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:56.061Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7c1f3bb6638e2a2aaeea-0553e6d134c1ff6dbd71",
+              "file": "agnostic/community.spec.js",
+              "line": 23,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "agnostic\\csp.spec.js",
+      "file": "agnostic/csp.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Content-Security-Policy",
+          "file": "agnostic/csp.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "la web envía la CSP y las cabeceras de seguridad",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 557,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:55.800Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "319475ce5299b035375c-7b83eaed07d34464f859",
+              "file": "agnostic/csp.spec.js",
+              "line": 10,
+              "column": 5
+            },
+            {
+              "title": "ninguna pantalla viola la política",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11268,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:56.161Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "319475ce5299b035375c-3ebd60bc96d70040fa90",
+              "file": "agnostic/csp.spec.js",
+              "line": 20,
+              "column": 5
+            },
+            {
+              "title": "la web envía la CSP y las cabeceras de seguridad",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1256,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:58.587Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "319475ce5299b035375c-088ecc9eb2baf2adccc4",
+              "file": "agnostic/csp.spec.js",
+              "line": 10,
+              "column": 5
+            },
+            {
+              "title": "ninguna pantalla viola la política",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 20103,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:59.905Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "319475ce5299b035375c-d32b676fde53636f05e8",
+              "file": "agnostic/csp.spec.js",
+              "line": 20,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "agnostic\\reports.spec.js",
+      "file": "agnostic/reports.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Reportes",
+          "file": "agnostic/reports.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "publica un reporte desde el formulario con la dirección geocodificada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 4516,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:56.428Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ea91f911126b43d6349b-38c8b5cd4be141e1c1fd",
+              "file": "agnostic/reports.spec.js",
+              "line": 4,
+              "column": 5
+            },
+            {
+              "title": "el listado filtra por tipo y abre el detalle",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4312,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:57.186Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ea91f911126b43d6349b-5a5ad25120dabe2b3ba4",
+              "file": "agnostic/reports.spec.js",
+              "line": 22,
+              "column": 5
+            },
+            {
+              "title": "el mapa carga los reportes de la zona",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4002,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:16:59.940Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ea91f911126b43d6349b-8a4a6686e4cd9969873d",
+              "file": "agnostic/reports.spec.js",
+              "line": 37,
+              "column": 5
+            },
+            {
+              "title": "publica un reporte desde el formulario con la dirección geocodificada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6518,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:00.811Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ea91f911126b43d6349b-165a4a74ddde2e80aa91",
+              "file": "agnostic/reports.spec.js",
+              "line": 4,
+              "column": 5
+            },
+            {
+              "title": "el listado filtra por tipo y abre el detalle",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5530,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:01.346Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ea91f911126b43d6349b-de25ef5acc978a16147b",
+              "file": "agnostic/reports.spec.js",
+              "line": 22,
+              "column": 5
+            },
+            {
+              "title": "el mapa carga los reportes de la zona",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5593,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:01.597Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ea91f911126b43d6349b-a7786245e48ce73ec32f",
+              "file": "agnostic/reports.spec.js",
+              "line": 37,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specific\\chromium-slow-network.spec.js",
+      "file": "specific/chromium-slow-network.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Chromium con red Slow 3G y CPU 4x",
+          "file": "specific/chromium-slow-network.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "el login carga en menos de 15 s y muestra el estado de espera",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "metric",
+                      "description": "login_visible_ms=5970"
+                    },
+                    {
+                      "type": "metric",
+                      "description": "login_to_map_ms=30983"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 34863,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:01.040Z",
+                      "annotations": [
+                        {
+                          "type": "metric",
+                          "description": "login_visible_ms=5970"
+                        },
+                        {
+                          "type": "metric",
+                          "description": "login_to_map_ms=30983"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ac6481e5a1e42da4bf74-790f4780fa40e0ae42b7",
+              "file": "specific/chromium-slow-network.spec.js",
+              "line": 14,
+              "column": 5
+            },
+            {
+              "title": "el login carga en menos de 15 s y muestra el estado de espera",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "CDP solo está disponible en Chromium",
+                      "location": {
+                        "file": "C:\\Users\\paypr\\OneDrive\\Documentos\\UPC\\ciclo 10\\factories\\gh\\peaceapp-platform\\tests\\e2e\\specs\\specific\\chromium-slow-network.spec.js",
+                        "line": 11,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 1105,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:06.975Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "CDP solo está disponible en Chromium",
+                          "location": {
+                            "file": "C:\\Users\\paypr\\OneDrive\\Documentos\\UPC\\ciclo 10\\factories\\gh\\peaceapp-platform\\tests\\e2e\\specs\\specific\\chromium-slow-network.spec.js",
+                            "line": 11,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ac6481e5a1e42da4bf74-44b63f324b174eecf091",
+              "file": "specific/chromium-slow-network.spec.js",
+              "line": 14,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specific\\firefox-webgl.spec.js",
+      "file": "specific/firefox-webgl.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Firefox sin WebGL",
+          "file": "specific/firefox-webgl.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "el mapa explica que no puede mostrarse en vez de decir \"0 reportes\"",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "firefoxUserPrefs solo existe en Firefox",
+                      "location": {
+                        "file": "C:\\Users\\paypr\\OneDrive\\Documentos\\UPC\\ciclo 10\\factories\\gh\\peaceapp-platform\\tests\\e2e\\specs\\specific\\firefox-webgl.spec.js",
+                        "line": 10,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 584,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:16.625Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "firefoxUserPrefs solo existe en Firefox",
+                          "location": {
+                            "file": "C:\\Users\\paypr\\OneDrive\\Documentos\\UPC\\ciclo 10\\factories\\gh\\peaceapp-platform\\tests\\e2e\\specs\\specific\\firefox-webgl.spec.js",
+                            "line": 10,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "767267f9247c82b269b5-1e78c7a89e6951d1dcf0",
+              "file": "specific/firefox-webgl.spec.js",
+              "line": 13,
+              "column": 5
+            },
+            {
+              "title": "se puede publicar un reporte con la ubicación del navegador",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "firefoxUserPrefs solo existe en Firefox",
+                      "location": {
+                        "file": "C:\\Users\\paypr\\OneDrive\\Documentos\\UPC\\ciclo 10\\factories\\gh\\peaceapp-platform\\tests\\e2e\\specs\\specific\\firefox-webgl.spec.js",
+                        "line": 10,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 479,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:13.662Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "firefoxUserPrefs solo existe en Firefox",
+                          "location": {
+                            "file": "C:\\Users\\paypr\\OneDrive\\Documentos\\UPC\\ciclo 10\\factories\\gh\\peaceapp-platform\\tests\\e2e\\specs\\specific\\firefox-webgl.spec.js",
+                            "line": 10,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "767267f9247c82b269b5-9279e630af59320217ad",
+              "file": "specific/firefox-webgl.spec.js",
+              "line": 18,
+              "column": 5
+            },
+            {
+              "title": "el mapa explica que no puede mostrarse en vez de decir \"0 reportes\"",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 5103,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:23.497Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "767267f9247c82b269b5-11580a899323ccce49f4",
+              "file": "specific/firefox-webgl.spec.js",
+              "line": 13,
+              "column": 5
+            },
+            {
+              "title": "se puede publicar un reporte con la ubicación del navegador",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 6126,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:23.496Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "767267f9247c82b269b5-e6b5d87c6f0fa0c27951",
+              "file": "specific/firefox-webgl.spec.js",
+              "line": 18,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "third-party\\integrations.spec.js",
+      "file": "third-party/integrations.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Mapbox",
+          "file": "third-party/integrations.spec.js",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "el mapa pide el estilo y la geocodificación con el token público de runtime",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3838,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:01.578Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "526a04513e0991a29d8b-7c026267376ee4f3ce2f",
+              "file": "third-party/integrations.spec.js",
+              "line": 12,
+              "column": 5
+            },
+            {
+              "title": "el mapa pide el estilo y la geocodificación con el token público de runtime",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4944,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:07.286Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "526a04513e0991a29d8b-b036bbca9aec65b67d42",
+              "file": "third-party/integrations.spec.js",
+              "line": 12,
+              "column": 5
+            }
+          ],
+          "suites": [
+            {
+              "title": "token rechazado (401)",
+              "file": "third-party/integrations.spec.js",
+              "line": 20,
+              "column": 10,
+              "specs": [
+                {
+                  "title": "sin Mapbox la dirección cae a coordenadas y se puede publicar igual",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 3,
+                          "status": "passed",
+                          "duration": 4521,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-26T12:17:04.036Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "526a04513e0991a29d8b-75391c3c21a50e1ac50f",
+                  "file": "third-party/integrations.spec.js",
+                  "line": 23,
+                  "column": 9
+                },
+                {
+                  "title": "sin Mapbox la dirección cae a coordenadas y se puede publicar igual",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 9,
+                          "parallelIndex": 2,
+                          "status": "passed",
+                          "duration": 6909,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-26T12:18:07.485Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "526a04513e0991a29d8b-5b0ba7ea7954c76264fa",
+                  "file": "third-party/integrations.spec.js",
+                  "line": 23,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Azure Blob Storage (evidencias)",
+          "file": "third-party/integrations.spec.js",
+          "line": 35,
+          "column": 6,
+          "specs": [
+            {
+              "title": "la imagen se sube directo a Blob con el SAS y se previsualiza",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3029,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:05.457Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "526a04513e0991a29d8b-bd2909b0d68704a72fe8",
+              "file": "third-party/integrations.spec.js",
+              "line": 36,
+              "column": 5
+            },
+            {
+              "title": "la imagen se sube directo a Blob con el SAS y se previsualiza",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5921,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:08.174Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "526a04513e0991a29d8b-19641a28b5aa87db9ee2",
+              "file": "third-party/integrations.spec.js",
+              "line": 36,
+              "column": 5
+            }
+          ],
+          "suites": [
+            {
+              "title": "subida con SAS rechazado (403)",
+              "file": "third-party/integrations.spec.js",
+              "line": 54,
+              "column": 14,
+              "specs": [
+                {
+                  "title": "avisa el fallo y deja el formulario usable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2849,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-26T12:17:07.493Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "526a04513e0991a29d8b-97123cbcf1502f4852a9",
+                  "file": "third-party/integrations.spec.js",
+                  "line": 57,
+                  "column": 13
+                },
+                {
+                  "title": "avisa el fallo y deja el formulario usable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 4845,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-26T12:18:12.288Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "526a04513e0991a29d8b-de483780e5a9992fac5a",
+                  "file": "third-party/integrations.spec.js",
+                  "line": 57,
+                  "column": 13
+                }
+              ]
+            },
+            {
+              "title": "subida con timeout de red",
+              "file": "third-party/integrations.spec.js",
+              "line": 54,
+              "column": 14,
+              "specs": [
+                {
+                  "title": "avisa el fallo y deja el formulario usable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 2876,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-26T12:17:08.518Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "526a04513e0991a29d8b-c9276942a4d446f02c2b",
+                  "file": "third-party/integrations.spec.js",
+                  "line": 57,
+                  "column": 13
+                },
+                {
+                  "title": "avisa el fallo y deja el formulario usable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 8,
+                          "parallelIndex": 3,
+                          "status": "passed",
+                          "duration": 5525,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-26T12:18:14.134Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "526a04513e0991a29d8b-7084b239146373586617",
+                  "file": "third-party/integrations.spec.js",
+                  "line": 57,
+                  "column": 13
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cloudinary (foto de perfil)",
+          "file": "third-party/integrations.spec.js",
+          "line": 68,
+          "column": 6,
+          "specs": [
+            {
+              "title": "envía el archivo con el upload preset sin firmar y guarda la URL segura",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2755,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:17:08.597Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "526a04513e0991a29d8b-c7ebc1c7e7981fe2a955",
+              "file": "third-party/integrations.spec.js",
+              "line": 69,
+              "column": 5
+            },
+            {
+              "title": "envía el archivo con el upload preset sin firmar y guarda la URL segura",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 4366,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-26T12:18:14.446Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "526a04513e0991a29d8b-8524a44dbf07be115623",
+              "file": "third-party/integrations.spec.js",
+              "line": 69,
+              "column": 5
+            }
+          ],
+          "suites": [
+            {
+              "title": "Cloudinary caído (500)",
+              "file": "third-party/integrations.spec.js",
+              "line": 83,
+              "column": 10,
+              "specs": [
+                {
+                  "title": "avisa el fallo y no cambia la foto",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2029,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-26T12:17:10.376Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "526a04513e0991a29d8b-e99afa600f947d8cfb76",
+                  "file": "third-party/integrations.spec.js",
+                  "line": 86,
+                  "column": 9
+                },
+                {
+                  "title": "avisa el fallo y no cambia la foto",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 45000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 4384,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-26T12:18:17.175Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "526a04513e0991a29d8b-18bae26c220c297bd97a",
+                  "file": "third-party/integrations.spec.js",
+                  "line": 86,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-26T12:16:34.358Z",
+    "duration": 117009.767,
+    "expected": 67,
+    "skipped": 3,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
