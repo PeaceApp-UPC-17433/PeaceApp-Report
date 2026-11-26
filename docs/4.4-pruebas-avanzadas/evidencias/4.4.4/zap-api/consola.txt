@@ -1,0 +1,39 @@
+identity-service: 18 operaciones (excluidas: DELETE /api/v1/users/me, PUT /api/v1/users/me/password)
+incident-service: 11 operaciones
+trust-service: 5 operaciones
+alerts-service: 10 operaciones
+community-service: 20 operaciones
+== API scan identity-service
+2026-11-26 14:50:07,078 falso positivo revisado: regla 6 en ^http://api-gateway:8080/api/v1/users/me$ (phoneNumber): Path Traversal de confianza baja: ZAP envió el último segmento de la URL ("me") como teléfono y la respuesta fue igual a la original. phoneNumber solo se guarda en una columna varchar(20) y nunca se usa para leer archivos (AccountService.updateProfile).
+WARN-NEW: Unexpected Content-Type was returned [100001] x 10 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+WARN-NEW: Insufficient Site Isolation Against Spectre Vulnerability [90004] x 5 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 3	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 113
+== API scan identity-service: salida 0
+== API scan incident-service
+2026-11-26 14:52:43,653 falso positivo revisado: regla 6 en ^http://api-gateway:8080/api/v1/users/me$ (phoneNumber): Path Traversal de confianza baja: ZAP envió el último segmento de la URL ("me") como teléfono y la respuesta fue igual a la original. phoneNumber solo se guarda en una columna varchar(20) y nunca se usa para leer archivos (AccountService.updateProfile).
+WARN-NEW: Unexpected Content-Type was returned [100001] x 8 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+WARN-NEW: Insufficient Site Isolation Against Spectre Vulnerability [90004] x 2 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 3	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 113
+== API scan incident-service: salida 0
+== API scan trust-service
+2026-11-26 14:57:14,675 falso positivo revisado: regla 6 en ^http://api-gateway:8080/api/v1/users/me$ (phoneNumber): Path Traversal de confianza baja: ZAP envió el último segmento de la URL ("me") como teléfono y la respuesta fue igual a la original. phoneNumber solo se guarda en una columna varchar(20) y nunca se usa para leer archivos (AccountService.updateProfile).
+WARN-NEW: Unexpected Content-Type was returned [100001] x 8 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 2	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 114
+== API scan trust-service: salida 0
+== API scan alerts-service
+2026-11-26 14:58:24,874 falso positivo revisado: regla 6 en ^http://api-gateway:8080/api/v1/users/me$ (phoneNumber): Path Traversal de confianza baja: ZAP envió el último segmento de la URL ("me") como teléfono y la respuesta fue igual a la original. phoneNumber solo se guarda en una columna varchar(20) y nunca se usa para leer archivos (AccountService.updateProfile).
+WARN-NEW: Unexpected Content-Type was returned [100001] x 6 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+WARN-NEW: Insufficient Site Isolation Against Spectre Vulnerability [90004] x 5 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 3	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 113
+== API scan alerts-service: salida 0
+== API scan community-service
+2026-11-26 15:00:03,209 falso positivo revisado: regla 6 en ^http://api-gateway:8080/api/v1/users/me$ (phoneNumber): Path Traversal de confianza baja: ZAP envió el último segmento de la URL ("me") como teléfono y la respuesta fue igual a la original. phoneNumber solo se guarda en una columna varchar(20) y nunca se usa para leer archivos (AccountService.updateProfile).
+WARN-NEW: Unexpected Content-Type was returned [100001] x 8 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+WARN-NEW: Insufficient Site Isolation Against Spectre Vulnerability [90004] x 4 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 3	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 113
+== API scan community-service: salida 0

@@ -1,0 +1,18 @@
+{
+  "screen": "login",
+  "browser": "firefox",
+  "url": "http://localhost:13000/login",
+  "passes": 26,
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 1,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "wcag": [
+        "wcag2aa",
+        "wcag143"
+      ]
+    }
+  ]
+}

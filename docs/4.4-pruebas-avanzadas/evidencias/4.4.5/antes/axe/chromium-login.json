@@ -1,0 +1,24 @@
+{
+  "screen": "login",
+  "browser": "chromium",
+  "url": "http://localhost:13000/login",
+  "passes": 26,
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 1,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "wcag": [
+        "wcag2aa",
+        "wcag143"
+      ],
+      "targets": [
+        {
+          "target": ".access-note",
+          "detail": "Element has insufficient color contrast of 4.26 (foreground color: #6b7d89, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ]
+}

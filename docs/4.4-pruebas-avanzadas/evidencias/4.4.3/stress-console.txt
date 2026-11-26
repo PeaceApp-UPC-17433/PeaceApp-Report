@@ -1,0 +1,17 @@
+time="2026-11-26T12:04:07Z" level=warning msg="Insufficient VUs, reached 1000 active VUs and cannot initialize more" executor=ramping-arrival-rate scenario=estres
+== stress (escenario estres, 660 s)
+peticiones: 122377  throughput: 185.4 req/s
+latencia ms  p50=20.6  p90=3681.5  p95=4298.5  p99=5936.8  max=11155.5
+errores: 0.00 %   checks OK: 100.00 %
+VUs max: 1000   iteraciones descartadas: 28522
+
+
+  escalón (req/s objetivo)   logrado    p50       p95       p99       errores
+  25                            25.0      5.5       9.7      13.4     0.00 %
+  50                            50.0      4.7       8.9      11.0     0.00 %
+  100                          100.0      4.9      10.1      14.0     0.00 %
+  200                          200.0      6.6      17.1      26.6     0.00 %
+  300                          300.0     10.8      42.9     101.6     0.00 %
+  400                          331.0    948.4    5372.6    7167.9     0.00 %
+  600                          338.6   3107.0    4559.7    5450.3     0.00 %
+time="2026-11-26T12:06:23Z" level=error msg="thresholds on metrics 'http_req_duration{scenario:estres}, http_req_duration{stage:400}, http_req_duration{stage:600}' have been crossed"

@@ -1,0 +1,5 @@
+# Exposición de endpoints de gestión en producción (2026-11-26T11:58:23Z), sin token
+/actuator/health       HTTP 200
+/actuator/prometheus   HTTP 401
+/actuator/env          HTTP 401
+/v3/api-docs           HTTP 401

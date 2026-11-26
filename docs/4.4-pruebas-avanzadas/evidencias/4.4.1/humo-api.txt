@@ -1,0 +1,115 @@
+== Gateway y seguridad
+  OK   sin token -> 401
+  OK   token invalido -> 401
+  OK   metricas no expuestas
+== Usuarios
+  OK   6 usuarios registrados y con token
+  OK   el administrador inicial inicia sesion
+  OK   un ciudadano no puede cambiar roles
+  OK   el administrador promueve a moderador
+== Verificacion de correo
+  OK   sin verificar no puede publicar
+  OK   el error indica EMAIL_NOT_VERIFIED
+  OK   sin verificar si puede consultar
+  OK   el perfil indica que no esta verificado
+  OK   un codigo con formato invalido es 400
+  OK   un codigo incorrecto es 400
+  OK   pedir otro codigo enseguida es 429
+  OK   el 429 informa cuanto esperar
+  OK   el codigo del correo es de 6 digitos
+  OK   el codigo correcto verifica
+  OK   ya verificado puede publicar
+  OK   el codigo no se puede reutilizar
+  OK   un verificado no puede pedir otro codigo
+== Cuenta
+  OK   login con correo en mayusculas
+  OK   actualizar perfil
+  OK   el perfil devuelve el nombre
+  OK   cambiar contrasena con la actual incorrecta
+  OK   recuperar contrasena responde 202 aunque no exista
+  OK   restablecer con el token
+  OK   el token no se puede reutilizar
+  OK   login con la contrasena nueva
+  OK   el registro rechaza contrasenas sin mayuscula
+== Alertas por proximidad
+  OK   B envia su ubicacion
+  OK   A reporta un robo cerca de B
+  OK   B recibe 1 alerta (evento incident.created -> alerts)
+  OK   el autor NO recibe alerta de su propio reporte
+  OK   el requestId viaja hasta incident-service
+  OK   el requestId viaja hasta trust-service
+  OK   el requestId viaja hasta alerts-service
+  OK   el requestId viaja hasta community-service
+== Consultas de reportes
+  OK   el listado filtra por tipo y devuelve el reporte
+  OK   el listado expone la severidad derivada del tipo
+  OK   el mapa devuelve el punto dentro de la zona
+  OK   el mapa de calor agrupa en celdas
+  OK   las estadisticas son solo para moderadores
+  OK   las estadisticas para el moderador
+  OK   las metricas de comunidad para el moderador
+  OK   resumen publico del usuario
+== Confianza (trust) y estado del incidente
+  OK   trust retiene el reporte sin descripcion ni evidencia -> EN_MODERACION
+  OK   el moderador ve el caso en la cola
+  OK   un ciudadano NO ve la cola de moderacion
+== Control de acceso por objeto (A01:2025)
+  OK   otro ciudadano no puede editar el reporte ajeno
+  OK   otro ciudadano no puede borrar el reporte ajeno
+  OK   el gateway descarta un X-User-Id falsificado
+  OK   un X-User-Role falsificado no da acceso de moderador
+== Entradas invalidas (A10:2025)
+  OK   un NUL en la busqueda de reportes es 400
+  OK   un NUL en el correo del login es 400
+  OK   un NUL en la busqueda de usuarios es 400
+  OK   no se puede dejar la cuenta sin correo
+  OK   un correo con formato invalido es 400
+== Comunidad
+  OK   C comenta
+  OK   el autor no puede votar su reporte
+  OK   3 confirmaciones -> verificado
+  OK   el incidente pasa a VALIDADO (community -> incident por RabbitMQ)
+== Moderacion
+  OK   B denuncia el comentario
+  OK   denuncia repetida -> 409
+  OK   un ciudadano no resuelve denuncias
+  OK   el moderador resuelve con sancion
+  OK   el comentario ya no se muestra
+== Contactos
+  OK   buscar un usuario inexistente por correo
+  OK   A solicita contacto a B
+  OK   B acepta
+== Baja de cuenta
+  OK   el usuario elimina su cuenta
+  OK   no puede volver a iniciar sesion
+  OK   su nombre queda anonimizado
+== Frontend (nginx)
+  OK   la web responde
+  OK   una ruta profunda de la SPA devuelve index.html
+  OK   healthz
+  OK   config.js se genera en runtime con API_URL
+  OK   config.js no se cachea
+  OK   el proxy /api llega al gateway (sin token -> 401)
+  OK   el navegador (con Origin de la web) puede iniciar sesion
+  OK   un origen no autorizado es rechazado
+  OK   login a traves del proxy de la web
+  OK   cabecera X-Frame-Options
+== Mensajeria
+  OK   ninguna cola de mensajes muertos con mensajes
+  OK   outbox de incident vacio (todo publicado)
+== Verificacion en dos pasos
+  OK   MFA: codigo incorrecto no activa
+  OK   MFA: activacion con codigo correcto
+  OK   MFA: 8 codigos de recuperacion
+  OK   MFA: login exige segundo factor
+  OK   MFA: token de desafio no abre la API
+  OK   MFA: codigo de activacion no se reutiliza
+  OK   MFA: login con codigo del autenticador
+  OK   MFA: perfil refleja mfaEnabled
+  OK   MFA: login con codigo de recuperacion
+  OK   MFA: codigo de recuperacion de un solo uso
+  OK   MFA: contrasena incorrecta no desactiva
+  OK   MFA: se desactiva con contrasena y codigo
+  OK   MFA: login normal tras desactivar
+
+Resultado: 97 OK, 0 fallos

@@ -1,0 +1,7 @@
+epoch,segundos_desde_fin,queue,messages
+1795694784,0,alerts.incident-created,0
+1795694784,0,community.incident-created,0
+1795694784,0,community.incident-deleted,0
+1795694784,0,incident.status-changes,0
+1795694784,0,notifications.email-requested,0
+1795694784,0,trust.incident-created,0

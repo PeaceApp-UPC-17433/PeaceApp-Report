@@ -1,0 +1,37 @@
+identity-service: 18 operaciones (excluidas: DELETE /api/v1/users/me, PUT /api/v1/users/me/password)
+incident-service: 11 operaciones
+trust-service: 5 operaciones
+alerts-service: 10 operaciones
+community-service: 20 operaciones
+== API scan identity-service
+WARN-NEW: A Server Error response code was returned by the server [100000] x 2 
+WARN-NEW: Unexpected Content-Type was returned [100001] x 10 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+WARN-NEW: Insufficient Site Isolation Against Spectre Vulnerability [90004] x 6 
+FAIL-NEW: Path Traversal [6] x 1 
+FAIL-NEW: 1	FAIL-INPROG: 0	WARN-NEW: 4	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 112
+== API scan identity-service: salida 1
+== API scan incident-service
+WARN-NEW: A Server Error response code was returned by the server [100000] x 1 
+WARN-NEW: Unexpected Content-Type was returned [100001] x 8 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+WARN-NEW: Insufficient Site Isolation Against Spectre Vulnerability [90004] x 2 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 4	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 113
+== API scan incident-service: salida 0
+== API scan trust-service
+WARN-NEW: Unexpected Content-Type was returned [100001] x 8 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 2	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 114
+== API scan trust-service: salida 0
+== API scan alerts-service
+WARN-NEW: Unexpected Content-Type was returned [100001] x 6 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+WARN-NEW: Insufficient Site Isolation Against Spectre Vulnerability [90004] x 5 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 3	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 113
+== API scan alerts-service: salida 0
+== API scan community-service
+WARN-NEW: Unexpected Content-Type was returned [100001] x 8 
+WARN-NEW: ZAP is Out of Date [10116] x 1 
+WARN-NEW: Insufficient Site Isolation Against Spectre Vulnerability [90004] x 4 
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 3	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 113
+== API scan community-service: salida 0

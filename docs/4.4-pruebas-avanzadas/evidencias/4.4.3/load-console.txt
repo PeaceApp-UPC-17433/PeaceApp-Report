@@ -1,0 +1,12 @@
+== load (escenario carga, 180 s)
+peticiones: 3600  throughput: 20.0 req/s
+latencia ms  p50=6.9  p90=11.8  p95=14.2  p99=23.8  max=400.8
+errores: 0.00 %   checks OK: 100.00 %
+VUs max: 20   iteraciones descartadas: 0
+
+  GET /incidents/{id}        p95=12.0 ms  p99=18.8 ms
+  GET /incidents/map         p95=14.0 ms  p99=26.0 ms
+  POST /incidents            p95=18.3 ms  p99=31.4 ms
+  GET /alerts/unread-count   p95=11.9 ms  p99=20.6 ms
+  GET /incidents/heatmap     p95=10.4 ms  p99=17.0 ms
+  GET /incidents             p95=12.5 ms  p99=22.5 ms

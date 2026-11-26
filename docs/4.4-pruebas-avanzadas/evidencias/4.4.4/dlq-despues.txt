@@ -1,0 +1,8 @@
+# Colas DLQ de RabbitMQ después de la segunda corrida del ZAP API scan (con las correcciones), 2026-11-26T15:22:13Z
+name	messages
+community.incident-deleted.dlq	0
+community.incident-created.dlq	0
+incident.status-changes.dlq	0
+alerts.incident-created.dlq	0
+trust.incident-created.dlq	0
+notifications.email-requested.dlq	0

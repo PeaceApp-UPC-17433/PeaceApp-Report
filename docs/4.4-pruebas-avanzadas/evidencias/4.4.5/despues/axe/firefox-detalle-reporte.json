@@ -1,0 +1,7 @@
+{
+  "screen": "detalle-reporte",
+  "browser": "firefox",
+  "url": "http://localhost:13000/reports/ced0b9cf-a7d7-45f9-a024-d145adbe5495",
+  "passes": 27,
+  "violations": []
+}

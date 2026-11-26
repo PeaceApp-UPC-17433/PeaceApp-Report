@@ -1,0 +1,7 @@
+{
+  "screen": "mapa",
+  "browser": "chromium",
+  "url": "http://localhost:13000/map",
+  "passes": 26,
+  "violations": []
+}

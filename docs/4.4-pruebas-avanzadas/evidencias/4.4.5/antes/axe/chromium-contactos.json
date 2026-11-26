@@ -1,0 +1,7 @@
+{
+  "screen": "contactos",
+  "browser": "chromium",
+  "url": "http://localhost:13000/contacts",
+  "passes": 25,
+  "violations": []
+}

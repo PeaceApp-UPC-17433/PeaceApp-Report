@@ -1,0 +1,7 @@
+login          a11y=100 perf=98 bp=100 seo=83 LCP=1084ms 
+registro       a11y=100 perf=98 bp=100 seo=83 LCP=1085ms 
+mapa           a11y=100 perf=96 bp=96 seo=83 LCP=1297ms 
+reportes       a11y=100 perf=100 bp=96 seo=83 LCP=785ms 
+nuevo-reporte  a11y=100 perf=96 bp=96 seo=83 LCP=1287ms 
+alertas        a11y=100 perf=100 bp=96 seo=83 LCP=805ms 
+perfil         a11y=100 perf=100 bp=96 seo=83 LCP=765ms 

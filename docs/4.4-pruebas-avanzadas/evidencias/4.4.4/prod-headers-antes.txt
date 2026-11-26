@@ -1,0 +1,32 @@
+# Cabeceras de produccion antes de la correccion (2026-11-26T11:30:33Z)
+## https://peaceapp.angelanampa.dev/
+HTTP/2 200 
+date: Thu, 26 Nov 2026 11:30:33 GMT
+content-type: text/html
+content-length: 535
+last-modified: Thu, 26 Nov 2026 04:04:36 GMT
+etag: "6b07afd4-217"
+x-content-type-options: nosniff
+x-frame-options: DENY
+referrer-policy: strict-origin-when-cross-origin
+permissions-policy: geolocation=(self)
+cache-control: no-cache
+accept-ranges: bytes
+strict-transport-security: max-age=31536000; includeSubDomains
+
+## https://api.peaceapp.angelanampa.dev/api/v1/incidents (sin token)
+HTTP/2 401 
+date: Thu, 26 Nov 2026 11:30:34 GMT
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+www-authenticate: Bearer
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-content-type-options: nosniff
+strict-transport-security: max-age=31536000; includeSubDomains
+x-frame-options: DENY
+x-xss-protection: 0
+referrer-policy: no-referrer
+

@@ -1,0 +1,4649 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.16.1",
+	"@generated": "Thu, 26 Nov 2026 13:20:15",
+	"created": "2026-11-26T13:20:15.299494434Z",
+	"site":[ 
+		{
+			"@name": "http://api-gateway:8080",
+			"@host": "api-gateway",
+			"@port": "8080",
+			"@ssl": "false",
+			"alerts": [ 
+				{
+					"pluginid": "90004",
+					"alertRef": "90004-1",
+					"alert": "Insufficient Site Isolation Against Spectre Vulnerability",
+					"name": "Insufficient Site Isolation Against Spectre Vulnerability",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Cross-Origin-Resource-Policy header is an opt-in header designed to counter side-channels attacks like Spectre. Resource should be specifically set as shareable amongst different origins.</p>",
+					"instances":[ 
+						{
+							"id": "15",
+							"uri": "http://api-gateway:8080/api/v1/alerts",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "12",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "181",
+							"uri": "http://api-gateway:8080/api/v1/alerts/unread-count",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "16",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "13",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": false,
+					"solution": "<p>Ensure that the application/web server sets the Cross-Origin-Resource-Policy header appropriately, and that it sets the Cross-Origin-Resource-Policy header to 'same-origin' for all web pages.</p><p>'same-site' is considered as less secured and should be avoided.</p><p>If resources must be shared, set the header to 'cross-origin'.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Resource-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-resource-policy).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+					"cweid": "693",
+					"wascid": "14",
+					"sourceid": "12"
+				},
+				{
+					"pluginid": "100001",
+					"alertRef": "100001",
+					"alert": "Unexpected Content-Type was returned",
+					"name": "Unexpected Content-Type was returned",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>A Content-Type of text/html was returned by the server.</p><p>This is not one of the types expected to be returned by an API.</p><p>Raised by the 'Alert on Unexpected Content Types' script</p>",
+					"instances":[ 
+						{
+							"id": "846",
+							"uri": "http://api-gateway:8080/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "text/html",
+							"otherinfo": ""
+						},
+						{
+							"id": "851",
+							"uri": "http://api-gateway:8080/?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "text/html",
+							"otherinfo": ""
+						},
+						{
+							"id": "854",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "text/html",
+							"otherinfo": ""
+						},
+						{
+							"id": "858",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "text/html",
+							"otherinfo": ""
+						},
+						{
+							"id": "860",
+							"uri": "http://api-gateway:8080/api/v1?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "text/html",
+							"otherinfo": ""
+						},
+						{
+							"id": "856",
+							"uri": "http://api-gateway:8080/api?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "text/html",
+							"otherinfo": ""
+						}
+					],
+					"count": "6",
+					"systemic": false,
+					"solution": "",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "886"
+				},
+				{
+					"pluginid": "10116",
+					"alertRef": "10116",
+					"alert": "ZAP is Out of Date",
+					"name": "ZAP is Out of Date",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>The version of ZAP you are using to test your app is out of date and is no longer being updated.</p><p>The risk level is set based on how out of date your ZAP version is.</p>",
+					"instances":[ 
+						{
+							"id": "4",
+							"uri": "http://api-gateway:8080/api/v1/alerts//read",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The latest version of ZAP is 2.17.0"
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Download the latest version of ZAP from https://www.zaproxy.org/download/ and install it.</p>",
+					"otherinfo": "<p>The latest version of ZAP is 2.17.0</p>",
+					"reference": "<p>https://www.zaproxy.org/download/</p>",
+					"cweid": "1104",
+					"wascid": "45",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "100000",
+					"alertRef": "100000",
+					"alert": "A Client Error response code was returned by the server",
+					"name": "A Client Error response code was returned by the server",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>A response code of 404 was returned by the server.</p><p>This may indicate that the application is failing to handle unexpected input correctly.</p><p>Raised by the 'Alert on HTTP Response Code Error' script</p>",
+					"instances":[ 
+						{
+							"id": "5",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1260",
+							"uri": "http://api-gateway:8080/computeMetadata/v1/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1254",
+							"uri": "http://api-gateway:8080/latest/meta-data/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1279",
+							"uri": "http://api-gateway:8080/metadata/instance",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1267",
+							"uri": "http://api-gateway:8080/opc/v1/instance/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "22",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "845",
+							"uri": "http://api-gateway:8080/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1761",
+							"uri": "http://api-gateway:8080/._darcs",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1760",
+							"uri": "http://api-gateway:8080/.bzr",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1732",
+							"uri": "http://api-gateway:8080/.DS_Store",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1705",
+							"uri": "http://api-gateway:8080/.env",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1717",
+							"uri": "http://api-gateway:8080/.git/config",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1759",
+							"uri": "http://api-gateway:8080/.hg",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1697",
+							"uri": "http://api-gateway:8080/.htaccess",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1714",
+							"uri": "http://api-gateway:8080/.idea/WebServers.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1733",
+							"uri": "http://api-gateway:8080/.php_cs.cache",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1744",
+							"uri": "http://api-gateway:8080/.ssh/id_dsa",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1743",
+							"uri": "http://api-gateway:8080/.ssh/id_rsa",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1718",
+							"uri": "http://api-gateway:8080/.svn/entries",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1719",
+							"uri": "http://api-gateway:8080/.svn/wc.db",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1712",
+							"uri": "http://api-gateway:8080/.zap7941007589430581127",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "17",
+							"uri": "http://api-gateway:8080/6390996450708923273",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "850",
+							"uri": "http://api-gateway:8080/?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1758",
+							"uri": "http://api-gateway:8080/_framework/blazor.boot.json",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1757",
+							"uri": "http://api-gateway:8080/_wpeprivate/config.json",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1745",
+							"uri": "http://api-gateway:8080/adminer.php",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "25",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1576",
+							"uri": "http://api-gateway:8080/api/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1708",
+							"uri": "http://api-gateway:8080/api/.env",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1699",
+							"uri": "http://api-gateway:8080/api/.htaccess",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "18",
+							"uri": "http://api-gateway:8080/api/2774439327232111663",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1690",
+							"uri": "http://api-gateway:8080/api/trace.axd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "28",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1577",
+							"uri": "http://api-gateway:8080/api/v1/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1701",
+							"uri": "http://api-gateway:8080/api/v1/.env",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1692",
+							"uri": "http://api-gateway:8080/api/v1/.htaccess",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "19",
+							"uri": "http://api-gateway:8080/api/v1/7663186237962154449",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1710",
+							"uri": "http://api-gateway:8080/api/v1/actuator/health",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "3",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1702",
+							"uri": "http://api-gateway:8080/api/v1/alerts/.env",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1693",
+							"uri": "http://api-gateway:8080/api/v1/alerts/.htaccess",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1700",
+							"uri": "http://api-gateway:8080/api/v1/alerts//.env",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1691",
+							"uri": "http://api-gateway:8080/api/v1/alerts//.htaccess",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "839",
+							"uri": "http://api-gateway:8080/api/v1/alerts//read",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "842",
+							"uri": "http://api-gateway:8080/api/v1/alerts//read?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1681",
+							"uri": "http://api-gateway:8080/api/v1/alerts//trace.axd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "20",
+							"uri": "http://api-gateway:8080/api/v1/alerts/4512858792257123016",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1009",
+							"uri": "http://api-gateway:8080/api/v1/alerts/?class.module.classLoader.DefaultAssertionStatus=nonsense",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "867",
+							"uri": "http://api-gateway:8080/api/v1/alerts/?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "836",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "235",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all?-s",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1012",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all?aaa=bbb",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1008",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all?class.module.classLoader.DefaultAssertionStatus=nonsense",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "863",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1581",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1704",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/.env",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1695",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/.htaccess",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "21",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/6843662682267180374",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "843",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "865",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "1686",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/trace.axd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1684",
+							"uri": "http://api-gateway:8080/api/v1/alerts/trace.axd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1579",
+							"uri": "http://api-gateway:8080/api/v1/alerts/unread-count/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "412",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1245",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1085",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22%2Bresponse.write%28778%2C270*355%2C008%29%2B%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1793",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22%2F%3E%3Cxsl%3Avalue-of+select%3D%22system-property%28%27xsl%3Avendor%27%29%22%2F%3E%3C%21--",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "641",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22%3B+select+%22java.lang.Thread.sleep%22%2815000%29+from+INFORMATION_SCHEMA.SYSTEM_COLUMNS+where+TABLE_NAME+%3D+%27SYSTEM_COLUMNS%27+and+COLUMN_NAME+%3D+%27TABLE_NAME%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1080",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22%3Bprint%28chr%28122%29.chr%2897%29.chr%28112%29.chr%2895%29.chr%28116%29.chr%28111%29.chr%28107%29.chr%28101%29.chr%28110%29%29%3B%24var%3D%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "365",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22%3E%3C%21--%23EXEC+cmd%3D%22dir+%5C%22--%3E%3C",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "363",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22%3E%3C%21--%23EXEC+cmd%3D%22ls+%2F%22--%3E%3C",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "754",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22case+when+cast%28pg_sleep%2815.0%29+as+varchar%29+%3E+%27%27+then+0+else+1+end+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "645",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%22java.lang.Thread.sleep%22%2815000%29",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1445",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%23%7B%25x%28sleep+15%29%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1434",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%23%7Bglobal.process.mainModule.require%28%27child_process%27%29.execSync%28%27sleep+15%27%29.toString%28%29%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1427",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%23set%28%24engine%3D%22%22%29%0A%23set%28%24proc%3D%24engine.getClass%28%29.forName%28%22java.lang.Runtime%22%29.getRuntime%28%29.exec%28%22sleep+15%22%29%29%0A%23set%28%24null%3D%24proc.waitFor%28%29%29%0A%24%7Bnull%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1082",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%24%7B%40print%28chr%28122%29.chr%2897%29.chr%28112%29.chr%2895%29.chr%28116%29.chr%28111%29.chr%28107%29.chr%28101%29.chr%28110%29%29%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1083",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%24%7B%40print%28chr%28122%29.chr%2897%29.chr%28112%29.chr%2895%29.chr%28116%29.chr%28111%29.chr%28107%29.chr%28101%29.chr%28110%29%29%7D%5C",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1439",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%24%7B__import__%28%22subprocess%22%29.check_output%28%22sleep+15%22%2C+shell%3DTrue%29%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "407",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "425",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%27%28",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "637",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%27%3B+select+%22java.lang.Thread.sleep%22%2815000%29+from+INFORMATION_SCHEMA.SYSTEM_COLUMNS+where+TABLE_NAME+%3D+%27SYSTEM_COLUMNS%27+and+COLUMN_NAME+%3D+%27TABLE_NAME%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1081",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%27%3Bprint%28chr%28122%29.chr%2897%29.chr%28112%29.chr%2895%29.chr%28116%29.chr%28111%29.chr%28107%29.chr%28101%29.chr%28110%29%29%3B%24var%3D%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "750",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%27case+when+cast%28pg_sleep%2815.0%29+as+varchar%29+%3E+%27%27+then+0+else+1+end+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "706",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%28DBMS_SESSION.SLEEP%2815%29%29",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "642",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%29%3B+select+%22java.lang.Thread.sleep%22%2815000%29+from+INFORMATION_SCHEMA.SYSTEM_COLUMNS+where+TABLE_NAME+%3D+%27SYSTEM_COLUMNS%27+and+COLUMN_NAME+%3D+%27TABLE_NAME%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1679",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%2B",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1086",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%2Bresponse.write%28%7B0%7D*%7B1%7D%29%2B",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "71",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%2F",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "101",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%2Falerts",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "66",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%2Fetc%2Fpasswd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "89",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%2FWEB-INF%2Fweb.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "418",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3B",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "633",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3B+select+%22java.lang.Thread.sleep%22%2815000%29+from+INFORMATION_SCHEMA.SYSTEM_COLUMNS+where+TABLE_NAME+%3D+%27SYSTEM_COLUMNS%27+and+COLUMN_NAME+%3D+%27TABLE_NAME%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1084",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3Bprint%28chr%28122%29.chr%2897%29.chr%28112%29.chr%2895%29.chr%28116%29.chr%28111%29.chr%28107%29.chr%28101%29.chr%28110%29%29%3B",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1790",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3C",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1246",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3C%21--",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "364",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3C%21--%23EXEC+cmd%3D%22dir+%5C%22--%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "362",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3C%21--%23EXEC+cmd%3D%22ls+%2F%22--%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1426",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3C%23assign+ex%3D%22freemarker.template.utility.Execute%22%3Fnew%28%29%3E+%24%7B+ex%28%22sleep+15%22%29+%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1443",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3C%25%3D%25x%28sleep+15%29%25%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1431",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3C%25%3D+global.process.mainModule.require%28%27child_process%27%29.execSync%28%27sleep+15%27%29.toString%28%29%25%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "914",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3Cimg%20src=%22random.gif%22%20onerror=alert(5397)%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "370",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3CscrIpt%3Ealert%281%29%3B%3C%2FscRipt%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "874",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3Cscript%3Ealert(5397)%3C/script%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1795",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3Cxsl%3Avalue-of+select%3D%22document%28%27http%3A%2F%2Fapi-gateway%3A22%27%29%22%2F%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1797",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3Cxsl%3Avalue-of+select%3D%22php%3Afunction%28%27exec%27%2C%27erroneous_command+2%3E%26amp%3B1%27%29%22%2F%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1791",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3Cxsl%3Avalue-of+select%3D%22system-property%28%27xsl%3Avendor%27%29%22%2F%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1794",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3Cxsl%3Avalue-of+select%3D%22system-property%28%27xsl%3Avendor%27%29%22%2F%3E%3C%21--",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1796",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%3Cxsl%3Avariable+name%3D%22rtobject%22+select%3D%22runtime%3AgetRuntime%28%29%22%2F%3E%0A%3Cxsl%3Avariable+name%3D%22process%22+select%3D%22runtime%3Aexec%28%24rtobject%2C%27erroneous_command%27%29%22%2F%3E%0A%3Cxsl%3Avariable+name%3D%22waiting%22+select%3D%22process%3AwaitFor%28%24process%29%22%2F%3E%0A%3Cxsl%3Avalue-of+select%3D%22%24process%22%2F%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1678",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%40",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "105",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%5Calerts",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "92",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%5CWEB-INF%5Cweb.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1247",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%5D%5D%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1438",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%7B%7B%22%22.__class__.__mro__%5B1%5D.__subclasses__%28%29%5B157%5D.__repr__.__globals__.get%28%22__builtins__%22%29.get%28%22__import__%22%29%28%22subprocess%22%29.check_output%28%22sleep+15%22%29%7D%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1430",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%7B%7B%3D+global.process.mainModule.require%28%27child_process%27%29.execSync%28%27sleep+15%27%29.toString%28%29+%7D%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1442",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%7B%7B__import__%28%22subprocess%22%29.check_output%28%22sleep+15%22%2C+shell%3DTrue%29%7D%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1435",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%7B%7Brange.constructor%28%22return+eval%28%5C%22global.process.mainModule.require%28%27child_process%27%29.execSync%28%27sleep+15%27%29.toString%28%29%5C%22%29%22%29%28%29%7D%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1448",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%7Bsystem%28%22sleep+15%22%29%7D",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1680",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=%7C",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "74",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "69",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "58",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2Fsystem.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "64",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5CWindows%5Csystem.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "369",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=0W45pz4p",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "282",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=3545772115957859048.owasp.org",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "289",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=5%3BURL%3D%27https%3A%2F%2F3545772115957859048.owasp.org%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "298",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=5%3BURL%3D%27https%3A%2F%2F3545772115957859048.owasp.org%2F%3FUNREAD%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "100",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=alerts",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1641",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=any%0ASet-cookie%3A+Tamper%3Da95790a2-0025-4535-95ec-888df8e6355a",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1633",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=any%0D%0ASet-cookie%3A+Tamper%3Da95790a2-0025-4535-95ec-888df8e6355a",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1645",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=any%0D%0ASet-cookie%3A+Tamper%3Da95790a2-0025-4535-95ec-888df8e6355a%0D%0A",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1642",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=any%3F%0ASet-cookie%3A+Tamper%3Da95790a2-0025-4535-95ec-888df8e6355a",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1637",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=any%3F%0D%0ASet-cookie%3A+Tamper%3Da95790a2-0025-4535-95ec-888df8e6355a",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1650",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=any%3F%0D%0ASet-cookie%3A+Tamper%3Da95790a2-0025-4535-95ec-888df8e6355a%0D%0A",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "79",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=c%3A%2F",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "55",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=c%3A%2FWindows%2Fsystem.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "82",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=c%3A%5C",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "61",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=c%3A%5CWindows%5Csystem.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "790",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=case+randomblob%28100000%29+when+not+null+then+1+else+1+end+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "795",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=case+randomblob%281000000%29+when+not+null+then+1+else+1+end+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "798",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=case+randomblob%2810000000%29+when+not+null+then+1+else+1+end+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "799",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=case+randomblob%28100000000%29+when+not+null+then+1+else+1+end+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "807",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=case+randomblob%281000000000%29+when+not+null+then+1+else+1+end+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "745",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=case+when+cast%28pg_sleep%2815.0%29+as+varchar%29+%3E+%27%27+then+0+else+1+end",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "747",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=case+when+cast%28pg_sleep%2815.0%29+as+varchar%29+%3E+%27%27+then+0+else+1+end+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1101",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=cat+%2Fetc%2Fpasswd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1141",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=get-help",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "306",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=http%3A%2F%2F%5C3545772115957859048.owasp.org",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "188",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=http%3A%2F%2Fwww.google.com",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "182",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=http%3A%2F%2Fwww.google.com%2F",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "191",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=http%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3DZAP",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "185",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=http%3A%2F%2Fwww.google.com%3A80%2F",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "194",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=http%3A%2F%2Fwww.google.com%3A80%2Fsearch%3Fq%3DZAP",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "301",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=https%3A%2F%2F%5C3545772115957859048.owasp.org",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "288",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=https%3A%2F%2F3545772115957859048%252eowasp%252eorg",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "285",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=https%3A%2F%2F3545772115957859048.owasp.org",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "295",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=https%3A%2F%2F3545772115957859048.owasp.org%2F%3FUNREAD",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "894",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=javascript:alert(5397)",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1592",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=KlKWdfYDlArtgFOwFpVJjjUetWmKQjUsDASGMFYTBYIqGKBIsbCKyTBmglhuvbsTlTQefUamttjboEiyKbWLMDqeQcIwwRSMfWFRajlhUaZwRgcRVPrCXnluKqRpoFKENgaMkwhJmUhMcofIaWjtGGmjZnPeBZWxgJXiEmgVJmRKIwVBXOXwTBBqYDCsrdFXCODjurUqJxlWOkaeaQFmAsYmAPmFUAynTsGRvXPQLReaSFrWlPTQTqZlhSevikojfQHLKqPCMcuQuDfmUJpLfcIpFZnLWtSUReLkLVRVFmehnDiwgJrlcoZSNixJxMbeicMtmaYQbcfHLBiTWtySrWjJGvFwfIIemKSjNqxOWRwGSNfGdgZerMJugdFbxbHWGJQGRstIorqjnTwUFdOkCPlDyeCaVisGcfccwGhOnBVjeVtqDVMYPWeubGCIaFirJJlTLXHurtxERpKWApiKwhKTeYOnnafqqufcBvgBeNeYvpMEAgFcAVpdxTZsZinmeddloAVgZcJdJBdhCqnBwmrlwoKqOnJLZNCKyucqpKeMnjnuVphjdjxArDUwVnCktlnlhAUwFRtMXSGdQhgHokSQImhgRyIiTtunmykKnDFFLcMWSXENsQQkCvbenqXWQkKoEhbxdqyEFhtvoOZMuTqPltxPSfjrMaPNcBCRstqkJJaEtrOAZGhFTJVVtkNwCdUuMWEwOWAcdXunTBXtFkULnawitioYhoeFWRQkWGbRZohFMKRoEgWiHmCdCFsTIvvbvpBIXkZamCHSYvArhZjksWCviHXLbbdPDuLZhBJPuytXrousrvBflIFICCJsWWQqoNsccauuPiwBeLnPbDltNPFePSRdyXLJscMVExHfdQrvCxeqjascsBJlAdUKtlnMjHPchNolLaxSHuaGsyiCAKdRtmxorvJXywfYdeAVplqaxMsCrykXNUopDfeLYLkvdtNYfQHJjBwHYsEZDlWPMXhsTnqCpuABCYJGIxTgoIWUCPhGUwIEhMSYufHEmNjSRpvDwtDaGwtsJaAysKgiTlnqPHWtbiXxbFDjkWinoMVbZbsUwfeNxLURslkagQUVlrdlDgVrWMnOPUKtomxsVIdxZcpiRdqdwcREKrJxWEfnhOlMCgEtsIMBNBoZhUlKHoxESflVLBUhtePjkjfZoejCcKtKIXQYXbGwkRZnrBNoZhdTGaiHPWgTaqPhYEXDLDXrPpfAQJdjtmjZbdiMRGtUvjTILRsabylkQvOVRtIUGckFdSVZFVSgAeZtQgbGabuOdCQgdxPYyBhCqcwAqKjDsgilEkceJnTMoYLKfLaEeYYmQLPnLoKMxqeJtaPLVDjZuUnMAxGlXACXJaHfFiOXeLdkDtKVHcgjjSjxSkmaEXUwlFAclGUVNEpULMyPxDoQmCUphbEhRvbgCMicOkpvxBHZJWpMoGhvggYTrPwXFTSlOSXipgLcqudKBTLrbHpPDhLVIQePBTaZLYLaFdcYIWSAJIoVgfiyNgtbarJkvaWrXtPgWGKwSjFNmlhIfxjIIabVITnpwiSqNsjTDpFpVIigLmDXvayMTWxRSJxhbYwFffsYBqduZUPCyFNnAeQseStiFEMhLTeJGohghaRFEWXwqOeNpsVldHSppbesHylRGFdXrjMvfXgiLmBOoaJbiniFlovXenZpWbOuhaLuDTZoXfsPYlTiGyLLWWryDmBrStaVSckmuSohMcwGqBNCpokKcoNjLLoBidUEnMxKMSCbPPBVZRLuvqyEMqZSOOWAxYWNjgedRkOatLebhMRycGQZpKChjxblehkbPnhZpBLRSjVXwabsmhrrBWxKQhaIkNrtZdACZYbVGrfdRfYXvetLlBUvQZwLviIlRFKBmYlNlIUsvTvACYdBkkXJVbpfIndkpmeglmxSeehGGYVanvJLcsUsjmKeCcCpjhDXejifcXRKdHdHAhIxXDHslKKrumCqJcIoRuSuvANRpDQmTQAlvxqyWiPZUVhUPPyLiOMkSDWXZYIuHUsyFjyYqYbWRieICFLnxurutmfvKSSODbUNIIKbwuBwDxTciFyJYiTEsrlRwRdPcnpXDxNTTLuY",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1087",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=response.write%28778%2C270*355%2C008%29",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1631",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=Set-cookie%3A+Tamper%3Da95790a2-0025-4535-95ec-888df8e6355a",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1792",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=system-property%28%27xsl%3Avendor%27%29%2F%3E",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "95",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=thishouldnotexistandhopefullyitwillnot",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1122",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=type+%25SYSTEMROOT%25%5Cwin.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "415",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1109",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%26cat+%2Fetc%2Fpasswd%26%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1469",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%26sleep+15.0%26%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1486",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%26timeout+%2FT+15.0%26%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1129",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%26type+%25SYSTEMROOT%25%5Cwin.ini%26%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1113",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%3Bcat+%2Fetc%2Fpasswd%3B%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1148",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%3Bget-help",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1472",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%3Bsleep+15.0%3B%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1503",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%3Bstart-sleep+-s+15.0",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1490",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%7Ctimeout+%2FT+15.0",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1132",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22%7Ctype+%25SYSTEMROOT%25%5Cwin.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "656",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+%2F+%22java.lang.Thread.sleep%22%2815000%29+%2F+%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "717",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+%2F+%28DBMS_SESSION.SLEEP%2815%29%29+%2F+%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "566",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+%2F+sleep%2815%29+%2F+%22",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "449",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+AND+%221%22%3D%221",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "440",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+AND+%221%22%3D%221%22+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "573",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+and+0+in+%28select+sleep%2815%29+%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "460",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+UNION+ALL+select+NULL+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "953",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "582",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%22+where+0+in+%28select+sleep%2815%29+%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1103",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%26cat+%2Fetc%2Fpasswd%26",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1463",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%26sleep+15.0%26",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1480",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%26timeout+%2FT+15.0",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1124",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%26type+%25SYSTEMROOT%25%5Cwin.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "410",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1114",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%26cat+%2Fetc%2Fpasswd%26%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1474",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%26sleep+15.0%26%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1492",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%26timeout+%2FT+15.0%26%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1137",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%26type+%25SYSTEMROOT%25%5Cwin.ini%26%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "428",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%28",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "466",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%29+UNION+ALL+select+NULL+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1119",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%3Bcat+%2Fetc%2Fpasswd%3B%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1150",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%3Bget-help",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1478",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%3Bsleep+15.0%3B%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1506",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%3Bstart-sleep+-s+15.0",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1497",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%7Ctimeout+%2FT+15.0",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1140",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27%7Ctype+%25SYSTEMROOT%25%5Cwin.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "651",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+%2F+%22java.lang.Thread.sleep%22%2815000%29+%2F+%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "713",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+%2F+%28DBMS_SESSION.SLEEP%2815%29%29+%2F+%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "563",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+%2F+sleep%2815%29+%2F+%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "446",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+AND+%271%27%3D%271",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "437",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+AND+%271%27%3D%271%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "572",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+and+0+in+%28select+sleep%2815%29+%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "662",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+and+exists+%28+select+%22java.lang.Thread.sleep%22%2815000%29+from+INFORMATION_SCHEMA.SYSTEM_COLUMNS+where+TABLE_NAME+%3D+%27SYSTEM_COLUMNS%27+and+COLUMN_NAME+%3D+%27TABLE_NAME%27%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "457",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+UNION+ALL+select+NULL+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "950",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "580",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%27+where+0+in+%28select+sleep%2815%29+%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "970",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%29%29+%22+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "968",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%29%29+%27+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "964",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%29%29+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "960",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%29+%22+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "958",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%29+%27+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "461",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%29+UNION+ALL+select+NULL+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "974",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%29+WAITFOR+DELAY+%270%3A0%3A15%27+%28",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "956",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%29+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "423",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%3B",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1107",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%3Bcat+%2Fetc%2Fpasswd%3B",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1144",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%3Bget-help",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1154",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%3Bget-help+%23",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1465",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%3Bsleep+15.0%3B",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1499",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%3Bstart-sleep+-s+15.0",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1507",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%3Bstart-sleep+-s+15.0+%23",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1483",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%7Ctimeout+%2FT+15.0",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1126",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD%7Ctype+%25SYSTEMROOT%25%5Cwin.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "648",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+%2F+%22java.lang.Thread.sleep%22%2815000%29+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "709",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+%2F+%28DBMS_SESSION.SLEEP%2815%29%29+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "756",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+%2F+case+when+cast%28pg_sleep%2815.0%29+as+varchar%29+%3E+%27%27+then+0+else+1+end+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "560",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+%2F+sleep%2815%29+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "569",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+and+0+in+%28select+sleep%2815%29+%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "444",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+AND+1%3D1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "436",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+AND+1%3D1+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "659",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+and+exists+%28+select+%22java.lang.Thread.sleep%22%2815000%29+from+INFORMATION_SCHEMA.SYSTEM_COLUMNS+where+TABLE_NAME+%3D+%27SYSTEM_COLUMNS%27+and+COLUMN_NAME+%3D+%27TABLE_NAME%27%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "720",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+and+exists+%28DBMS_SESSION.SLEEP%2815%29%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "586",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+or+0+in+%28select+sleep%2815%29+%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "452",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+UNION+ALL+select+NULL+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "947",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+WAITFOR+DELAY+%270%3A0%3A15%27+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "576",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD+where+0+in+%28select+sleep%2815%29+%29+--+",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "870",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "292",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=URL%3D%27http%3A%2F%2F3545772115957859048.owasp.org%27",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "809",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=vanf5qbv1l5mmokp5gfqee8kvyx84tloao6o1llqp1ndwksnvbb036cg3lwu",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "85",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=WEB-INF%2Fweb.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "86",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=WEB-INF%5Cweb.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "203",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=www.google.com",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "197",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=www.google.com%2F",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "207",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=www.google.com%2Fsearch%3Fq%3DZAP",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "202",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=www.google.com%3A80%2F",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "208",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=www.google.com%3A80%2Fsearch%3Fq%3DZAP",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "802",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=z2af4xa9nyeimtiuq5rdiij9xwo0yaax4rib0jrbht79xj6ewr2cvd6gs52",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1606",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=ZAP",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1610",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=ZAP%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%0A",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1612",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=ZAP+%251%21s%252%21s%253%21s%254%21s%255%21s%256%21s%257%21s%258%21s%259%21s%2510%21s%2511%21s%2512%21s%2513%21s%2514%21s%2515%21s%2516%21s%2517%21s%2518%21s%2519%21s%2520%21s%2521%21n%2522%21n%2523%21n%2524%21n%2525%21n%2526%21n%2527%21n%2528%21n%2529%21n%2530%21n%2531%21n%2532%21n%2533%21n%2534%21n%2535%21n%2536%21n%2537%21n%2538%21n%2539%21n%2540%21n%0A",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "380",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zApPX6sS",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1330",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%23%7B8532*4164%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1342",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%23set%28%24x%3D7823*4186%29%24%7Bx%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1329",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%24%7B2915*6890%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1340",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%3C%25%3D6178*6572%25%3Ezj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1344",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%3Cp+th%3Atext%3D%22%24%7B5607*3038%7D%22%3E%3C%2Fp%3Ezj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1332",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%7B%236750*1634%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1334",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%7B%402635*2308%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1346",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%7B%40math+key%3D%225241%22+method%3D%22multiply%22+operand%3D%223333%22%2F%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1338",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%7B%7B%3D6623*8369%7D%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1336",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%7B%7B5105*6804%7D%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1348",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%7B%7B82560%7Cadd%3A86530%7D%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1350",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%7B%7Bprint+%227754%22+%221304%22%7D%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1327",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj%7B6469*8796%7Dzj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1325",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=zj+9674*9519+zj",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1682",
+							"uri": "http://api-gateway:8080/api/v1/trace.axd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1020",
+							"uri": "http://api-gateway:8080/api/v1?class.module.classLoader.DefaultAssertionStatus=nonsense",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "859",
+							"uri": "http://api-gateway:8080/api/v1?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1017",
+							"uri": "http://api-gateway:8080/api?class.module.classLoader.DefaultAssertionStatus=nonsense",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "855",
+							"uri": "http://api-gateway:8080/api?name=abc",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1736",
+							"uri": "http://api-gateway:8080/app/etc/local.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1762",
+							"uri": "http://api-gateway:8080/BitKeeper",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1747",
+							"uri": "http://api-gateway:8080/CHANGELOG.txt",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1749",
+							"uri": "http://api-gateway:8080/composer.json",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1750",
+							"uri": "http://api-gateway:8080/composer.lock",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1716",
+							"uri": "http://api-gateway:8080/config/database.yml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1715",
+							"uri": "http://api-gateway:8080/config/databases.yml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1722",
+							"uri": "http://api-gateway:8080/core",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1720",
+							"uri": "http://api-gateway:8080/CVS/root",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1734",
+							"uri": "http://api-gateway:8080/DEADJOE",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1683",
+							"uri": "http://api-gateway:8080/elmah.axd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "838",
+							"uri": "http://api-gateway:8080/favicon.ico",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1727",
+							"uri": "http://api-gateway:8080/filezilla.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1755",
+							"uri": "http://api-gateway:8080/i.php",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1742",
+							"uri": "http://api-gateway:8080/id_dsa",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1741",
+							"uri": "http://api-gateway:8080/id_rsa",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1754",
+							"uri": "http://api-gateway:8080/info.php",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1740",
+							"uri": "http://api-gateway:8080/key.pem",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1713",
+							"uri": "http://api-gateway:8080/lfm.php",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1739",
+							"uri": "http://api-gateway:8080/myserver.key",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1753",
+							"uri": "http://api-gateway:8080/phpinfo.php",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1738",
+							"uri": "http://api-gateway:8080/privatekey.key",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1752",
+							"uri": "http://api-gateway:8080/server-info",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1721",
+							"uri": "http://api-gateway:8080/server-status",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1737",
+							"uri": "http://api-gateway:8080/server.key",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1723",
+							"uri": "http://api-gateway:8080/sftp-config.json",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1728",
+							"uri": "http://api-gateway:8080/sitemanager.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1748",
+							"uri": "http://api-gateway:8080/sites/default/files/.ht.sqlite",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1735",
+							"uri": "http://api-gateway:8080/sites/default/private/files/backup_migrate/scheduled/test.txt",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1756",
+							"uri": "http://api-gateway:8080/test.php",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1688",
+							"uri": "http://api-gateway:8080/trace.axd",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1746",
+							"uri": "http://api-gateway:8080/vb_test.php",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1751",
+							"uri": "http://api-gateway:8080/vim_settings.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "229",
+							"uri": "http://api-gateway:8080/WEB-INF/applicationContext.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "230",
+							"uri": "http://api-gateway:8080/WEB-INF/classes/01/389.class",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "232",
+							"uri": "http://api-gateway:8080/WEB-INF/classes/01/397.class",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "233",
+							"uri": "http://api-gateway:8080/WEB-INF/classes/applicationContext/xml.class",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "231",
+							"uri": "http://api-gateway:8080/WEB-INF/classes/web/xml.class",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "228",
+							"uri": "http://api-gateway:8080/WEB-INF/web.xml",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1730",
+							"uri": "http://api-gateway:8080/winscp.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1724",
+							"uri": "http://api-gateway:8080/WS_FTP.ini",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1709",
+							"uri": "http://api-gateway:8080/zap2509786699824202064",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1011",
+							"uri": "http://api-gateway:8080?class.module.classLoader.DefaultAssertionStatus=nonsense",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1015",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "251",
+							"uri": "http://api-gateway:8080/?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1019",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1021",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1013",
+							"uri": "http://api-gateway:8080/api/v1/alerts",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "1014",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "238",
+							"uri": "http://api-gateway:8080/api/v1/alerts//read?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "240",
+							"uri": "http://api-gateway:8080/api/v1/alerts/?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1016",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "242",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "1026",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "250",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "247",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "1025",
+							"uri": "http://api-gateway:8080/api/v1/alerts/unread-count",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "266",
+							"uri": "http://api-gateway:8080/api/v1/alerts/unread-count?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "243",
+							"uri": "http://api-gateway:8080/api/v1/alerts?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "1027",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "405",
+							"otherinfo": ""
+						},
+						{
+							"id": "257",
+							"uri": "http://api-gateway:8080/api/v1?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "253",
+							"uri": "http://api-gateway:8080/api?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input",
+							"nodeName": null,
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "0",
+							"uri": "http://api-gateway:8080/api/v1/alerts//read",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1566",
+							"uri": "http://api-gateway:8080/api/v1/alerts//read/",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1568",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all/",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "1",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1574",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						},
+						{
+							"id": "2",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "400",
+							"otherinfo": ""
+						},
+						{
+							"id": "1571",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location/",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "404",
+							"otherinfo": ""
+						}
+					],
+					"count": "345",
+					"systemic": false,
+					"solution": "",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "388",
+					"wascid": "20",
+					"sourceid": "14"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049-1",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"id": "11",
+							"uri": "http://api-gateway:8080/api/v1/alerts",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "",
+							"attack": "",
+							"evidence": "DELETE ",
+							"otherinfo": ""
+						},
+						{
+							"id": "184",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "",
+							"attack": "",
+							"evidence": "DELETE ",
+							"otherinfo": ""
+						},
+						{
+							"id": "183",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"id": "6",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"id": "179",
+							"uri": "http://api-gateway:8080/api/v1/alerts/unread-count",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"id": "8",
+							"uri": "http://api-gateway:8080/api/v1/alerts?status=UNREAD",
+							"nodeName": null,
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"id": "9",
+							"uri": "http://api-gateway:8080/api/v1/alerts//read",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "PUT ",
+							"otherinfo": ""
+						},
+						{
+							"id": "7",
+							"uri": "http://api-gateway:8080/api/v1/alerts/read-all",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "PUT ",
+							"otherinfo": ""
+						},
+						{
+							"id": "10",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "PUT ",
+							"otherinfo": ""
+						},
+						{
+							"id": "14",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "",
+							"attack": "",
+							"evidence": "PUT ",
+							"otherinfo": ""
+						}
+					],
+					"count": "10",
+					"systemic": false,
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "12"
+				},
+				{
+					"pluginid": "10104",
+					"alertRef": "10104",
+					"alert": "User Agent Fuzzer",
+					"name": "User Agent Fuzzer",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>",
+					"instances":[ 
+						{
+							"id": "1815",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1810",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1805",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1820",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1822",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1836",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1834",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1824",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1828",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1832",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1830",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1826",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "DELETE",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1856",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1851",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1844",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1860",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1866",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1914",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1907",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1872",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1888",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1901",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1896",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1880",
+							"uri": "http://api-gateway:8080",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1861",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1857",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1853",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1869",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1877",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1924",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1918",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1883",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1897",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1915",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1905",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1889",
+							"uri": "http://api-gateway:8080/api",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1942",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1939",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1937",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1946",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1950",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1976",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1972",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1954",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1961",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1969",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1965",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1957",
+							"uri": "http://api-gateway:8080/api/v1",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1951",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1947",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1943",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1955",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1959",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1983",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1981",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1963",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1973",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1979",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1977",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1968",
+							"uri": "http://api-gateway:8080/api/v1/alerts/",
+							"nodeName": null,
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1864",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1849",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1841",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1876",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1882",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1935",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1931",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1892",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1910",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1927",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1921",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1899",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1867",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1846",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1839",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1873",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1885",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1934",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1930",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1893",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1912",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1925",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1920",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "1904",
+							"uri": "http://api-gateway:8080/api/v1/alerts/settings/location",
+							"nodeName": null,
+							"method": "PUT",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "84",
+					"systemic": false,
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/wstg</p>",
+					"cweid": "0",
+					"wascid": "0",
+					"sourceid": "1922"
+				}
+			]
+		}
+	],
+	"sequences":[
+	]
+
+}

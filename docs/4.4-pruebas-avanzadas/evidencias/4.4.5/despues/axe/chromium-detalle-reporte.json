@@ -1,0 +1,7 @@
+{
+  "screen": "detalle-reporte",
+  "browser": "chromium",
+  "url": "http://localhost:13000/reports/72c3ed25-dfdd-4794-a17f-c029d27a5957",
+  "passes": 27,
+  "violations": []
+}
